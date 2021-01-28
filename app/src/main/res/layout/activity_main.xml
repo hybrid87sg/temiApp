@@ -4,12 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/coral">
 
-    <fragment
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotView1"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/htb"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_gravity="center|start"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotView2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/htcd"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotView3"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/smw"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_gravity="center|end"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/htcFrame"
         android:name="com.hybrid.temiui.HowFragment"
-        android:id="@+id/fragView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/coral"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageButton
+            android:id="@+id/ibClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_close"
+            android:layout_gravity="top|start"
+             />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lvHtc"
+            android:layout_width="900dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/htc1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
