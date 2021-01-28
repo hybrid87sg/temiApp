@@ -3,5 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="mapview">Map View</string>
     <string name="zoneview">Zone View</string>
+    <string name="home">Home</string>
 
 </resources>

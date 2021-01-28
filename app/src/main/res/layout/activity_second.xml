@@ -17,6 +17,7 @@
             android:id="@+id/ivMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             app:srcCompat="@drawable/temiux_mappage" />
 
         <Button
@@ -24,6 +25,7 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
             android:backgroundTint="@color/dblue"
             android:text="@string/zoneview" />
     </FrameLayout>
@@ -37,6 +39,7 @@
             android:id="@+id/ivZone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
             app:srcCompat="@drawable/temiux_zonespage" />
 
         <Button
@@ -44,20 +47,37 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
             android:backgroundTint="@color/dblue"
             android:text="@string/mapview" />
     </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/ibHome"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/ic_home"
-        android:tint="@color/dblue"
-        android:background="@color/clear"/>
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <ImageButton
+            android:id="@+id/ibHome"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_home"
+            android:tint="@color/dblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

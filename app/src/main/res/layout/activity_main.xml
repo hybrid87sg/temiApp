@@ -48,5 +48,35 @@
 
     </LinearLayout>
 
+    <FrameLayout
+        android:id="@+id/htcFrame"
+        android:name="com.hybrid.temiui.HowFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/coral"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageButton
+            android:id="@+id/ibClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_close"
+            android:layout_gravity="top|start"
+             />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lvHtc"
+            android:layout_width="900dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/htc1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
