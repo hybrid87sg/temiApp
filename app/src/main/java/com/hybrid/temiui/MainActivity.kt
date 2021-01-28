@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         supportActionBar?.hide()
 
         binding.lotView1.setOnClickListener {
-
+            val intent = Intent(this,HtcActivity::class.java)
+            startActivity(intent)
         }
 
 
