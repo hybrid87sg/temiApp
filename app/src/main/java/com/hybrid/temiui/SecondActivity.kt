@@ -26,18 +26,14 @@ class SecondActivity : AppCompatActivity(R.layout.activity_second) {
 
 
         binding.btnMap.setOnClickListener {
-            binding.ivMap.visibility = View.VISIBLE
-            binding.ivZone.visibility = View.GONE
-            binding.btnZone.visibility = View.VISIBLE
-            binding.btnMap.visibility = View.GONE
+            binding.frameMap.visibility = View.VISIBLE
+            binding.frameZone.visibility = View.GONE
 
         }
 
         binding.btnZone.setOnClickListener {
-            binding.ivZone.visibility = View.VISIBLE
-            binding.ivMap.visibility = View.GONE
-            binding.btnZone.visibility = View.GONE
-            binding.btnMap.visibility = View.VISIBLE
+            binding.frameZone.visibility = View.VISIBLE
+            binding.frameMap.visibility = View.GONE
         }
 
         binding.ibHome.setOnClickListener{

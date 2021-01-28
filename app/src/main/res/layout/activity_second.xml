@@ -7,49 +7,46 @@
     android:background="@color/coral"
     tools:context=".SecondActivity">
 
-    <ImageView
-        android:id="@+id/ivMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
-        app:srcCompat="@drawable/temiux_mappage" />
+    <FrameLayout
+        android:id="@+id/frameMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-    <ImageView
-        android:id="@+id/ivZone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/temiux_zonespage" />
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/temiux_mappage" />
 
-    <Button
-        android:id="@+id/btnMap"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/dblue"
-        android:text="@string/mapview"
-        android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnZone"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="@color/dblue"
+            android:text="@string/zoneview" />
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/btnZone"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/dblue"
-        android:text="@string/zoneview"
-        android:layout_marginStart="15dp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/frameZone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/temiux_zonespage" />
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="@color/dblue"
+            android:text="@string/mapview" />
+    </FrameLayout>
 
     <ImageButton
         android:id="@+id/ibHome"
