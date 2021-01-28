@@ -5,40 +5,30 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.animation.AnimationUtils
-import android.widget.Button
-import androidx.core.widget.addTextChangedListener
-import coil.load
-import com.hybrid.temiui.databinding.ActivitySecondBinding
+import com.hybrid.temiui.databinding.ActivityMapBinding
 
-class SecondActivity : AppCompatActivity(R.layout.activity_second) {
 
-    private lateinit var binding: ActivitySecondBinding
+class MapActivity : AppCompatActivity(R.layout.activity_map) {
+
+    private lateinit var binding: ActivityMapBinding
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySecondBinding.inflate(layoutInflater)
+        binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportActionBar?.hide()
 
-        val fadeOut = AnimationUtils.loadAnimation(this,R.anim.fade_out)
-        val fadeIn = AnimationUtils.loadAnimation(this,R.anim.fade_in)
 
         binding.btnMap.setOnClickListener {
             binding.frameMap.visibility = View.VISIBLE
-            binding.frameMap.startAnimation(fadeIn)
             binding.frameZone.visibility = View.GONE
-            binding.frameZone.startAnimation(fadeOut)
-
         }
 
         binding.btnZone.setOnClickListener {
             binding.frameZone.visibility = View.VISIBLE
-            binding.frameZone.startAnimation(fadeIn)
             binding.frameMap.visibility = View.GONE
-            binding.frameMap.startAnimation(fadeOut)
         }
 
         binding.ibHome.setOnClickListener{
