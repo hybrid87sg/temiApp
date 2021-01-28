@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.airbnb.lottie.LottieDrawable
 import com.hybrid.temiui.databinding.ActivityHtcBinding
 
 class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
