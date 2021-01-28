@@ -1,9 +1,8 @@
-package com.hybrid.temiui.Fragments
+package com.hybrid.temiui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentHowBinding
 
 
