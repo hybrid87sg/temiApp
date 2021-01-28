@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             startActivity(intent)
         }
 
+        binding.lotView2.setOnClickListener {
+            val intent = Intent(this,HtbActivity::class.java)
+            startActivity(intent)
+        }
+
 
         binding.lotView3.setOnClickListener{
             val intent = Intent(this,MapActivity::class.java)

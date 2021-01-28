@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TemiUI">
-        <activity android:name=".HtcActivity"></activity>
+        <activity android:name=".HtbActivity"></activity>
+        <activity android:name=".HtcActivity" />
 
         <meta-data
             android:name="com.robotemi.sdk.metadata.SKILL"
