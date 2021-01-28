@@ -5,10 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".HowFragment">
 
-    <ImageView
-        android:id="@+id/ivWifi"
-        android:layout_width="500dp"
-        android:layout_height="500dp"
-        android:layout_gravity="center"/>
-
+    <ImageSwitcher
+        android:id="@+id/imageSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </FrameLayout>
