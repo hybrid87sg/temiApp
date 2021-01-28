@@ -8,4 +8,6 @@
     <string name="next">Next Step</string>
     <string name="back">Previous Step</string>
 
+    <string name="maptitle">Select a button below to navigate</string>
+
 </resources>

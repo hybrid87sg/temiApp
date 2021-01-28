@@ -52,6 +52,19 @@
             android:text="@string/mapview" />
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/tvMapTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maptitle"
+        android:textSize="50sp"
+        android:fontFamily="@font/qanelas_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -75,8 +88,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/home"
+            android:fontFamily="@font/qanelas_semibold"
             android:layout_gravity="center"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textColor="@color/white"/>
 
     </LinearLayout>
