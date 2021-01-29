@@ -50,29 +50,94 @@
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/dblue"
             android:text="@string/mapview" />
+
+        <TextView
+            android:id="@+id/tvMapTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/maptitle"
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            app:columnCount="3"
+            app:rowCount="3"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="100dp">
+
+            <Button
+                android:id="@+id/zoneA"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneB"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneC"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneD"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneE"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneF"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneG"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/button_bg_clear" />
+
+            <Button
+                android:id="@+id/zoneRug"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="26dp"
+                android:background="@drawable/button_bg_clear" />
+        </androidx.gridlayout.widget.GridLayout>
+
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/tvMapTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/maptitle"
-        android:textSize="50sp"
-        android:fontFamily="@font/qanelas_semibold"
-        android:textColor="@color/white"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/ibHome"
@@ -81,17 +146,17 @@
             android:background="@color/clear"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_home"
-            android:tint="@color/dblue"/>
+            android:tint="@color/dblue" />
 
         <TextView
             android:id="@+id/tvHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/home"
-            android:fontFamily="@font/qanelas_semibold"
             android:layout_gravity="center"
-            android:textSize="40sp"
-            android:textColor="@color/white"/>
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
