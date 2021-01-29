@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/zoneAFragment"
-        android:name="com.hybrid.temiui.fragments.ZoneAFragment"
+        android:name="com.hybrid.temiui.fragments.BrandsFragment"
         android:label="fragment_zone_a"
-        tools:layout="@layout/fragment_zone_a" />
+        tools:layout="@layout/fragment_brands" />
 </navigation>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,128 +7,14 @@
     android:background="@color/coral"
     tools:context=".MapActivity">
 
-    <FrameLayout
-        android:id="@+id/frameMap"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
+    <ListView
+        android:id="@+id/lvMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"/>
 
-        <ImageView
-            android:id="@+id/ivMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            app:srcCompat="@drawable/temiux_mappage" />
-
-        <Button
-            android:id="@+id/btnZone"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/dblue"
-            android:text="@string/zoneview" />
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:id="@+id/frameZone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/ivZone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="70dp"
-            app:srcCompat="@drawable/temiux_zonespage" />
-
-        <Button
-            android:id="@+id/btnMap"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/dblue"
-            android:text="@string/mapview" />
-
-        <TextView
-            android:id="@+id/tvMapTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:text="@string/maptitle"
-            android:textColor="@color/white"
-            android:textSize="50sp" />
-
-        <androidx.gridlayout.widget.GridLayout
-            android:layout_width="500dp"
-            android:layout_height="500dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="170dp"
-            app:columnCount="3"
-            app:rowCount="3">
-
-            <Button
-                android:id="@+id/zoneA"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneB"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneC"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneD"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneE"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneF"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneG"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:background="@drawable/button_bg_clear" />
-
-            <Button
-                android:id="@+id/zoneRug"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="26dp"
-                android:background="@drawable/button_bg_clear" />
-        </androidx.gridlayout.widget.GridLayout>
-
-    </FrameLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -136,8 +22,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_alignParentBottom="true"
+        >
 
         <ImageButton
             android:id="@+id/ibHome"
@@ -161,13 +47,24 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/flFragment"
+        android:id="@+id/flZone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lvMenu"/>
+    <FrameLayout
+        android:id="@+id/flBrands"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lvMenu"
+        android:visibility="gone"/>
+    <FrameLayout
+        android:id="@+id/flUtils"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lvMenu"
+        android:visibility="gone"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

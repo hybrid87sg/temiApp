@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hybrid.temiui.MainActivity
+import com.hybrid.temiui.MapActivity
 import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentZoneBinding
 
@@ -29,8 +30,8 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
             binding.gridZoneA.visibility = View.GONE
         }
 
-        binding.ibHome.setOnClickListener {
-            val intent = Intent (context, MainActivity::class.java)
+        binding.zoneBtnMenu.setOnClickListener {
+            val intent = Intent (context, MapActivity::class.java)
             startActivity(intent)
         }
     }
