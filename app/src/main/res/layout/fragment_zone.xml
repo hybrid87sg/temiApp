@@ -232,6 +232,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -249,33 +250,61 @@
             android:id="@+id/zoneBButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/qanelas_semibold"
             android:padding="15dp"
             android:text="@string/zoneB"
-            android:layout_marginStart="20dp"
             android:textSize="20sp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal"
-        android:gravity="bottom|center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
         <Button
-            android:id="@+id/zoneBtnMenu"
+            android:id="@+id/zoneCButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/zoneview"
-            android:textSize="40sp"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/qanelas_semibold"
-            android:padding="30dp"/>
+            android:padding="15dp"
+            android:text="@string/zoneC"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoneDButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneD"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoneEButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneE"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoneFButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoneGButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneG"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
