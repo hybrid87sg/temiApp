@@ -45,7 +45,6 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         }
 
         binding.zoneA.setOnClickListener {
-            Toast.makeText(this, "Zone A", Toast.LENGTH_LONG).show()
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flFragment, fragmentZone)
                 commit()
