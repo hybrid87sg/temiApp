@@ -42,5 +42,10 @@
     <string name="b8">B8</string>
     <string name="b9">B9</string>
 
+    //Menu
+    <string name="zones">Zones</string>
+    <string name="brands">Brands</string>
+    <string name="utils">Utilities</string>
+
 
 </resources>
