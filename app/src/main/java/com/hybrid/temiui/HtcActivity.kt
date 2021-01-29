@@ -35,7 +35,7 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
             binding.lotFrame2.visibility = View.GONE
         }
 
-        binding.ibHome.setOnClickListener {
+        binding.llHome.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
