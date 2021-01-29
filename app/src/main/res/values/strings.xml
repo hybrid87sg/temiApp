@@ -10,6 +10,16 @@
 
     <string name="maptitle">Select a button below to navigate</string>
 
+    //Zones - All
+    <string name="zoneA">Zone A</string>
+    <string name="zoneB">Zone B</string>
+    <string name="zoneC">Zone C</string>
+    <string name="zoneD">Zone D</string>
+    <string name="zoneE">Zone E</string>
+    <string name="zoneF">Zone F</string>
+    <string name="zoneG">Zone G</string>
+    <string name="zoneRug">Rugs</string>
+
     //Zone A
     <string name="a1">A1</string>
     <string name="a2">A2</string>
@@ -31,5 +41,6 @@
     <string name="b7">B7</string>
     <string name="b8">B8</string>
     <string name="b9">B9</string>
+
 
 </resources>

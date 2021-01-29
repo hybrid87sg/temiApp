@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zone_nav"
+    app:startDestination="@id/zoneFragment">
+
+    <fragment
+        android:id="@+id/zoneFragment"
+        android:name="com.hybrid.temiui.fragments.ZoneFragment"
+        android:label="ZoneFragment" >
+        <action
+            android:id="@+id/action_zoneFragment_to_zoneAFragment"
+            app:destination="@id/zoneAFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zoneAFragment"
+        android:name="com.hybrid.temiui.fragments.ZoneAFragment"
+        android:label="fragment_zone_a"
+        tools:layout="@layout/fragment_zone_a" />
+</navigation>

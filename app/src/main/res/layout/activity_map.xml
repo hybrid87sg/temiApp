@@ -30,6 +30,7 @@
             android:text="@string/zoneview" />
     </FrameLayout>
 
+
     <FrameLayout
         android:id="@+id/frameZone"
         android:layout_width="match_parent"
@@ -65,10 +66,10 @@
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="500dp"
             android:layout_height="500dp"
-            app:columnCount="3"
-            app:rowCount="3"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="170dp"
-            android:layout_marginStart="100dp">
+            app:columnCount="3"
+            app:rowCount="3">
 
             <Button
                 android:id="@+id/zoneA"
@@ -129,7 +130,6 @@
 
     </FrameLayout>
 
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,4 +159,15 @@
             android:textSize="40sp" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

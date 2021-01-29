@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ZoneActivity"
-    android:background="@color/coral">
+    android:background="@color/coral"
+    tools:context=".fragments.ZoneFragment">
 
     <FrameLayout
         android:id="@+id/gridZoneA"
@@ -137,9 +137,9 @@
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:columnCount="4"
-            android:rowCount="4"
-            android:layout_gravity="center">
+            android:rowCount="4">
 
             <Button
                 android:id="@+id/b1"
@@ -228,6 +228,36 @@
     </FrameLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/zoneAButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneA"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zoneBButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/qanelas_semibold"
+            android:padding="15dp"
+            android:text="@string/zoneB"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -254,7 +284,6 @@
             android:text="@string/home"
             android:textColor="@color/white"
             android:textSize="40sp" />
-
 
     </LinearLayout>
 

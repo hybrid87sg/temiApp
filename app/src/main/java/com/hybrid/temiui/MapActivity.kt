@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.GridView
+import android.widget.Toast
+import androidx.gridlayout.widget.GridLayout
 import com.hybrid.temiui.databinding.ActivityMapBinding
+import com.hybrid.temiui.fragments.ZoneFragment
 
 
 class MapActivity : AppCompatActivity(R.layout.activity_map) {
@@ -14,6 +17,7 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
     private lateinit var binding: ActivityMapBinding
 
 
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMapBinding.inflate(layoutInflater)
@@ -21,9 +25,9 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
 
         supportActionBar?.hide()
 
-        val gridZoneA : GridView = findViewById(R.id.gridZoneA)
-        val gridZoneB : GridView = findViewById(R.id.gridZoneB)
-
+        val fragmentZone = ZoneFragment()
+        val gridZoneA = findViewById<GridLayout>(R.id.gridZoneA)
+        val gridZoneB = findViewById<GridLayout>(R.id.gridZoneB)
 
         binding.btnMap.setOnClickListener {
             binding.frameMap.visibility = View.VISIBLE
@@ -35,22 +39,24 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
             binding.frameMap.visibility = View.GONE
         }
 
-        binding.ibHome.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
+        binding.ibHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-
-        //Zones
         binding.zoneA.setOnClickListener {
-            val intent = Intent(this,ZoneActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Zone A", Toast.LENGTH_LONG).show()
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, fragmentZone)
+                commit()
+            }
         }
+
         binding.zoneB.setOnClickListener {
-            val intent = Intent(this,ZoneActivity::class.java)
-            startActivity(intent)
-            gridZoneB.visibility = View.VISIBLE
-            gridZoneA.visibility = View.GONE
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, fragmentZone)
+                commit()
+            }
         }
     }
 }
