@@ -18,22 +18,7 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
 
         supportActionBar?.hide()
 
-        binding.htcNext.setOnClickListener {
-            binding.lotFrame2.visibility = View.VISIBLE
-            binding.lotFrame1.visibility = View.GONE
-        }
-        binding.htcNext2.setOnClickListener {
-            binding.lotFrame3.visibility = View.VISIBLE
-            binding.lotFrame2.visibility = View.GONE
-        }
-        binding.htcBack3.setOnClickListener {
-            binding.lotFrame2.visibility = View.VISIBLE
-            binding.lotFrame3.visibility = View.GONE
-        }
-        binding.htcBack2.setOnClickListener {
-            binding.lotFrame1.visibility = View.VISIBLE
-            binding.lotFrame2.visibility = View.GONE
-        }
+
 
         binding.llHome.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)

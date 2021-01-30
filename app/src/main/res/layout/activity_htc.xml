@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,102 +7,20 @@
     android:background="@color/coral"
     tools:context=".HtcActivity">
 
-    <FrameLayout
-        android:id="@+id/lotFrame1"
+    <LinearLayout
+        android:id="@+id/imgNav"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/llHome">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotHtc1"
-            android:layout_width="900dp"
+        <Button
+            android:id="@+id/step1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="false"
-            app:lottie_rawRes="@raw/htc1" />
+            android:text=""/>
 
-
-        <Button
-            android:id="@+id/htcNext"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg"
-            android:text="@string/next"
-            android:textSize="20sp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/lotFrame2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotHtc2"
-            android:layout_width="900dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="false"
-            app:lottie_rawRes="@raw/htc2" />
-
-        <Button
-            android:id="@+id/htcBack2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg"
-            android:text="@string/back"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/htcNext2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg"
-            android:text="@string/next"
-            android:textSize="20sp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/lotFrame3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotHtc3"
-            android:layout_width="900dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="true"
-            app:lottie_cacheComposition="true"
-            app:lottie_loop="false"
-            app:lottie_rawRes="@raw/htc3" />
-
-        <Button
-            android:id="@+id/htcBack3"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom|center"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg"
-            android:text="@string/back"
-            android:textSize="20sp" />
-
-
-    </FrameLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llHome"
@@ -111,8 +29,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
 
         <ImageButton
             android:id="@+id/ibHome"
@@ -136,4 +54,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
