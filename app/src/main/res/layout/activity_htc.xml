@@ -7,18 +7,48 @@
     android:background="@color/coral"
     tools:context=".HtcActivity">
 
-    <LinearLayout
-        android:id="@+id/imgNav"
+    <ImageView
+        android:id="@+id/ivHtc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/imgNav"
+        android:src="@drawable/temiux_htc1"/>
+
+    <LinearLayout
+        android:id="@+id/imgNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/llHome">
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/llHome">
 
         <Button
             android:id="@+id/step1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
+            android:layout_height="90dp"
+            android:text="@string/step1"
+            android:layout_gravity="center"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/step2"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="@string/step2"
+            android:textSize="40sp"
+            android:layout_marginStart="40dp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/step3"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="@string/step3"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:textSize="40sp" />
 
     </LinearLayout>
 
@@ -26,11 +56,11 @@
         android:id="@+id/llHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/ibHome"
@@ -46,8 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/home"
             android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/home"
             android:textColor="@color/white"
             android:textSize="40sp" />
 

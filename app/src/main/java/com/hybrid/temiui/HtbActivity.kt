@@ -17,26 +17,19 @@ class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
 
         supportActionBar?.hide()
 
-        binding.htbNext.setOnClickListener {
-            binding.lotFrame2.visibility = View.VISIBLE
-            binding.lotFrame1.visibility = View.GONE
-        }
-        binding.htbNext2.setOnClickListener {
-            binding.lotFrame3.visibility = View.VISIBLE
-            binding.lotFrame2.visibility = View.GONE
-        }
-        binding.htbBack3.setOnClickListener {
-            binding.lotFrame2.visibility = View.VISIBLE
-            binding.lotFrame3.visibility = View.GONE
-        }
-        binding.htbBack2.setOnClickListener {
-            binding.lotFrame1.visibility = View.VISIBLE
-            binding.lotFrame2.visibility = View.GONE
-        }
-
         binding.llHome.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.step1.setOnClickListener {
+            binding.ivHtb.setImageResource(R.drawable.temiux_htc1)
+        }
+        binding.step2. setOnClickListener {
+            binding.ivHtb.setImageResource(R.drawable.temiux_htc2)
+        }
+        binding.step3 . setOnClickListener {
+            binding.ivHtb.setImageResource(R.drawable.temiux_htc3)
         }
     }
 }

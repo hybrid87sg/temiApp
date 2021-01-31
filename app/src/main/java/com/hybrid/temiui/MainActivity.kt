@@ -16,20 +16,18 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         supportActionBar?.hide()
 
-        binding.lotView1.setOnClickListener {
+        binding.btnHtc.setOnClickListener {
             val intent = Intent(this,HtcActivity::class.java)
             startActivity(intent)
         }
-
-        binding.lotView2.setOnClickListener {
+        binding.btnHtb.setOnClickListener {
             val intent = Intent(this,HtbActivity::class.java)
             startActivity(intent)
         }
-
-
-        binding.lotView3.setOnClickListener{
+        binding.btnHtn.setOnClickListener {
             val intent = Intent(this,MapActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

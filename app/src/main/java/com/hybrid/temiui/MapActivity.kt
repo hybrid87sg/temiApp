@@ -1,13 +1,11 @@
 package com.hybrid.temiui
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
+import com.hybrid.temiui.fragments.MapFragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
 import com.hybrid.temiui.fragments.BrandsFragment
-import com.hybrid.temiui.fragments.MapFragment
 import com.hybrid.temiui.fragments.UtilsFragment
 import com.hybrid.temiui.fragments.ZoneFragment
 
@@ -35,6 +33,11 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         }
 
         binding.brandView.setOnClickListener {
+            if (binding.brandView.isSelected){
+                binding.brandView.setBackgroundColor(R.color.white)
+            }else{
+                binding.brandView.setBackgroundResource(R.drawable.button_menu)
+            }
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flZone, fragmentBrands)
                 commit()

@@ -3,8 +3,6 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import com.airbnb.lottie.LottieDrawable
 import com.hybrid.temiui.databinding.ActivityHtcBinding
 
 class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
@@ -18,11 +16,19 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
 
         supportActionBar?.hide()
 
-
-
         binding.llHome.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.step1.setOnClickListener {
+            binding.ivHtc.setImageResource(R.drawable.temiux_htc1)
+        }
+        binding.step2. setOnClickListener {
+            binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
+        }
+        binding.step3 . setOnClickListener {
+            binding.ivHtc.setImageResource(R.drawable.temiux_htc3)
         }
 
     }

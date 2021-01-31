@@ -4,50 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/coral">
+    android:background="@color/coral"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotView1"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            app:lottie_rawRes="@raw/htcd"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            android:layout_gravity="center|start"/>
+        <Button
+            android:id="@+id/btnHtc"
+            android:layout_width="220dp"
+            android:layout_height="300dp"
+            android:background="@drawable/button_menu"
+            android:fontFamily="@font/qanelas_extrabold"
+            android:lines="3"
+            android:text="@string/htc"
+            android:textSize="30sp" />
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotView2"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            app:lottie_rawRes="@raw/htb"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btnHtb"
+            android:layout_width="220dp"
+            android:layout_height="300dp"
+            android:background="@drawable/button_menu"
+            android:fontFamily="@font/qanelas_extrabold"
+            android:lines="3"
+            android:text="@string/htb"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:textSize="30sp" />
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lotView3"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            app:lottie_rawRes="@raw/smw"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            android:layout_gravity="center|end"/>
+        <Button
+            android:id="@+id/btnHtn"
+            android:layout_width="220dp"
+            android:layout_height="300dp"
+            android:background="@drawable/button_menu"
+            android:fontFamily="@font/qanelas_extrabold"
+            android:lines="3"
+            android:text="@string/htn"
+            android:textSize="30sp" />
 
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
