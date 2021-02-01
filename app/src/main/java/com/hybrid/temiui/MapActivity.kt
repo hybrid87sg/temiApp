@@ -3,6 +3,7 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.airbnb.lottie.LottieAnimationView
 import com.hybrid.temiui.fragments.MapFragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
 import com.hybrid.temiui.fragments.BrandsFragment
@@ -33,16 +34,12 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         }
 
         binding.brandView.setOnClickListener {
-            if (binding.brandView.isSelected){
-                binding.brandView.setBackgroundColor(R.color.white)
-            }else{
-                binding.brandView.setBackgroundResource(R.drawable.button_menu)
-            }
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flZone, fragmentBrands)
                 commit()
             }
         }
+
         binding.utilsView.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flZone, fragmentUtils)
@@ -60,6 +57,9 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         binding.llHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            val lot1 = findViewById<LottieAnimationView>(R.id.lot1)
+            lot1.resumeAnimation()
+            finish()
         }
 
         binding.llMap.setOnClickListener {

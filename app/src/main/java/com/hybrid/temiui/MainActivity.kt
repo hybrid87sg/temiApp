@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         binding.btnHtc.setOnClickListener {
             val intent = Intent(this,HtcActivity::class.java)
             startActivity(intent)
+            binding.lot1.pauseAnimation()
         }
         binding.btnHtb.setOnClickListener {
             val intent = Intent(this,HtbActivity::class.java)

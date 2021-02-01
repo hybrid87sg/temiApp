@@ -19,6 +19,7 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
         binding.llHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         binding.step1.setOnClickListener {

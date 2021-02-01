@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,305 +7,280 @@
     android:background="@color/coral"
     tools:context=".fragments.ZoneFragment">
 
-    <FrameLayout
-        android:id="@+id/gridZoneA"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:columnCount="4"
-            android:rowCount="4">
-
-            <Button
-                android:id="@+id/a1"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a1"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a2"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a2"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a3"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a3"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a4"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a4"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a5"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a5"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a6"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a6"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a7"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a7"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a8"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a8"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/a9"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a9"
-                android:textSize="40sp" />
-
-
-        </GridLayout>
-    </FrameLayout>
-
-    <FrameLayout
+    <GridLayout
         android:id="@+id/gridZoneB"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_below="@+id/zoneBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:columnCount="4"
+        android:rowCount="3"
         android:visibility="gone">
 
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
-            android:columnCount="4"
-            android:rowCount="4">
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a1"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a1"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a2"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a2"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a3"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b3"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a3"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a4"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b4"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a4"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a5"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b5"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a5"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b6"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a6"
+            android:textSize="40sp" />
 
-            <Button
-                android:id="@+id/b6"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a6"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/b7"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_zone"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/a7"
-                android:textSize="40sp" />
+        <Button
+            android:id="@+id/b7"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a7"
+            android:textSize="40sp" />
 
 
-        </GridLayout>
-    </FrameLayout>
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gridZoneA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zoneBar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:columnCount="4"
+        android:rowCount="3">
+
+        <Button
+            android:id="@+id/a1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a1"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a2"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a3"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a4"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a4"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a5"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a5"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a6"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a6"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a7"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a7"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a8"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a8"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/a9"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_zone"
+            android:fontFamily="@font/qanelas_semibold"
+            android:text="@string/a9"
+            android:textSize="40sp" />
+
+
+    </GridLayout>
 
     <LinearLayout
+        android:id="@+id/zoneBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/zoneAButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneA"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneA"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zonea" />
 
-        <Button
-            android:id="@+id/zoneBButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneB"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneB"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zoneb" />
 
-        <Button
-            android:id="@+id/zoneCButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneC"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneC"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zonec" />
 
-        <Button
-            android:id="@+id/zoneDButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneD"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneD"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zoned" />
 
-        <Button
-            android:id="@+id/zoneEButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneE"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneE"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zonee" />
 
-        <Button
-            android:id="@+id/zoneFButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneF"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneF"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zonef" />
 
-        <Button
-            android:id="@+id/zoneGButton"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivZoneG"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/qanelas_semibold"
-            android:padding="15dp"
-            android:text="@string/zoneG"
-            android:textSize="20sp" />
+            android:layout_margin="20dp"
+            android:src="@drawable/showmewhere_zoneg" />
+
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
