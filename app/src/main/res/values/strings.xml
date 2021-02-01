@@ -5,6 +5,7 @@
     <string name="zoneview">Zone View</string>
     <string name="home">Home</string>
     <string name="homely">Homely</string>
+    <string name="tvwifi">Scan me to connect to our Wifi!!</string>
 
     <string name="next">Next Step</string>
     <string name="back">Previous Step</string>
@@ -55,7 +56,8 @@
     <string name="step1">Step 1</string>
     <string name="step2">Step 2</string>
     <string name="step3">Step 3</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

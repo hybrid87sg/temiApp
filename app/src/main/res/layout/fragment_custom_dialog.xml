@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="800dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CustomDialogFragment">
+
+
+    <ImageView
+        android:id="@+id/ivDialogTest"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_centerInParent="true"
+        app:tint="@color/coral"
+        android:tintMode="add"
+        android:background="@color/dblue"
+        android:scaleType="center"
+        android:src="@drawable/wifi" />
+
+    <TextView
+        android:id="@+id/tvWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tvwifi"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:fontFamily="@font/qanelas_semibold"
+        android:textAlignment="center"
+        android:layout_margin="20dp"/>
+</RelativeLayout>

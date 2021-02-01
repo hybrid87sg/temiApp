@@ -45,6 +45,8 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         }
 
 
+
+
         binding.brandView.setOnClickListener {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.flZone, fragmentBrands)

@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import com.hybrid.temiui.databinding.ActivityMainBinding
+import com.hybrid.temiui.fragments.CustomDialogFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -29,6 +32,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         binding.btnHtn.setOnClickListener {
             val intent = Intent(this,MapActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.ivWifi.setOnClickListener {
+            val dialog = CustomDialogFragment()
+            dialog.show(supportFragmentManager,"Custom")
         }
 
 

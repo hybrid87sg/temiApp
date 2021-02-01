@@ -7,6 +7,9 @@
     android:background="@color/coral"
     tools:context=".fragments.ZoneFragment">
 
+
+
+
     <GridLayout
         android:id="@+id/gridZoneB"
         android:layout_width="wrap_content"

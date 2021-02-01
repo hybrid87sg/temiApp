@@ -11,11 +11,17 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/menuView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/btmNav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="@color/coral"
-        android:elevation="1dp"
-        app:itemTextColor="@color/btn_unselect"
+        app:elevation="0dp"
+        android:paddingTop="50dp"
+        android:paddingStart="30dp"
+        app:itemHorizontalPadding="20dp"
+        app:itemTextAppearance="@style/TextAppearance.AppCompat.BigFont"
+        app:itemTextColor="@color/dblue"
         app:menu="@menu/zone_menu" />
 
     <LinearLayout
