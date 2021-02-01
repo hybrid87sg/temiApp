@@ -5,6 +5,7 @@
     <string name="zoneview">Zone View</string>
     <string name="home">Home</string>
     <string name="homely">Homely</string>
+    <string name="wifi">Wifi Connect</string>
     <string name="tvwifi">Scan me to connect to our Wifi!!</string>
 
     <string name="next">Next Step</string>
@@ -12,6 +13,9 @@
     <string name="htc">How to check</string>
     <string name="htb">How to purchase</string>
     <string name="htn">How to navigate</string>
+
+    <string name="pause">Pause Movement</string>
+    <string name="change">Change Direction</string>
 
     <string name="maptitle">Select a button below to navigate</string>
 

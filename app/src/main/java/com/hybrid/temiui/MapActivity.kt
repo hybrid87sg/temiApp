@@ -5,12 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.airbnb.lottie.LottieAnimationView
-import com.hybrid.temiui.fragments.MapFragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
-import com.hybrid.temiui.fragments.BrandsFragment
-import com.hybrid.temiui.fragments.UtilsFragment
-import com.hybrid.temiui.fragments.ZoneFragment
+import com.hybrid.temiui.fragments.*
 
 
 class MapActivity : AppCompatActivity(R.layout.activity_map) {
@@ -26,12 +22,15 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         supportActionBar?.hide()
 
 
-        val zoneView = findViewById<Button>(R.id.zoneView)
-
         val fragmentZone = ZoneFragment()
         val fragmentBrands = BrandsFragment()
         val fragmentUtils = UtilsFragment()
         val fragmentMap = MapFragment()
+
+        val intent = Intent(this, MainActivity::class.java)
+
+        val dialog = CustomDialogFragment()
+
 
         setCurrentFragment(fragmentZone)
 
@@ -44,43 +43,13 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
             true
         }
 
-
-
-
-        binding.brandView.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flZone, fragmentBrands)
-                commit()
+        binding.btmNavBar.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.homeBtmNav -> startActivity(intent)
+                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
+                R.id.zoneBtmNav -> setCurrentFragment(fragmentZone)
             }
-        }
-
-        binding.utilsView.setOnClickListener {
-            zoneView.setBackgroundColor(getColor(R.color.white))
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flZone, fragmentUtils)
-                commit()
-            }
-        }
-
-        binding.zoneView.setOnClickListener {
-            zoneView.isSelected = !zoneView.isSelected
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flZone, fragmentZone)
-                commit()
-            }
-        }
-
-        binding.llHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        binding.llMap.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.flZone, fragmentMap)
-                commit()
-            }
+            true
         }
 
 

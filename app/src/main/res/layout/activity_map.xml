@@ -12,134 +12,44 @@
         android:id="@+id/menuView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btmNav"
+        android:layout_above="@id/btmNavBar"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/coral"
         app:elevation="0dp"
         android:paddingTop="50dp"
         android:paddingStart="30dp"
+        android:paddingEnd="30dp"
         app:itemHorizontalPadding="20dp"
         app:itemTextAppearance="@style/TextAppearance.AppCompat.BigFont"
         app:itemTextColor="@color/dblue"
         app:menu="@menu/zone_menu" />
 
-    <LinearLayout
-        android:id="@+id/llMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="30dp"
-        android:paddingTop="30dp"
-        android:paddingEnd="30dp"
-        android:paddingBottom="60dp"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/zoneView"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:backgroundTint="@color/btn_select"
-            android:text="@string/zones"
-            android:textColor="@color/text_select"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/brandView"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_menu"
-            android:text="@string/brands"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/utilsView"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:background="@drawable/button_menu"
-            android:text="@string/utils"
-            android:textSize="30sp" />
-
-
-    </LinearLayout>
-
     <FrameLayout
         android:id="@+id/flZone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/btmNav"
+        android:layout_above="@id/btmNavBar"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@id/menuView" />
 
-    <LinearLayout
-        android:id="@+id/btmNav"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNavBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_height="105dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/llHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginEnd="40dp"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/ibHome"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_gravity="center"
-                android:background="@color/clear"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_home"
-                android:tint="@color/dblue" />
-
-            <TextView
-                android:id="@+id/tvHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/home"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/ibMap"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:background="@color/clear"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_map"
-                android:tint="@color/dblue" />
-
-            <TextView
-                android:id="@+id/tvMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/qanelas_semibold"
-                android:text="@string/mapview"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/coral"
+        app:itemTextColor="@color/dblue"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@color/dblue"
+        android:fitsSystemWindows="true"
+        app:labelVisibilityMode="labeled"
+        app:elevation="0dp"
+        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.MidFont"
+        app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.MidFont"
+        app:menu="@menu/btm_nav_menu" />
 
 </RelativeLayout>

@@ -8,14 +8,17 @@ import androidx.fragment.app.DialogFragment
 import com.hybrid.temiui.R
 
 
-class CustomDialogFragment : DialogFragment() {
+class NavDialogFragment: DialogFragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
 
-        return inflater.inflate(R.layout.fragment_custom_dialog, container, false)
+
+        return inflater.inflate(R.layout.fragment_nav_dialog,container,false
+        )
     }
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Design.BottomNavigationView.Btmnavbar">
+        <item name="android:color">@color/dblue</item>
+    </style>
+</resources>

@@ -1,9 +1,15 @@
 package com.hybrid.temiui
 
 import android.content.Intent
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityHtcBinding
+import com.hybrid.temiui.fragments.CustomDialogFragment
+import com.hybrid.temiui.fragments.MapFragment
+import com.ismaeldivita.chipnavigation.ChipNavigationBar
 
 class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
 
@@ -16,21 +22,44 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
 
         supportActionBar?.hide()
 
-        binding.llHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        val intentMap = Intent(this,MapActivity::class.java)
+
+        val intent = Intent(this, MainActivity::class.java)
+
+        val dialog = CustomDialogFragment()
+
+
+        binding.btmNavBar.setOnNavigationItemSelectedListener{
+            when(it.itemId){
+                R.id.homeBtmNav -> startActivity(intent)
+                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
+                R.id.zoneBtmNav -> startActivity(intentMap)
+            }
+            true
         }
 
-        binding.step1.setOnClickListener {
+        binding.backTwo.setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc1)
+            binding.control2.visibility = View.GONE
+            binding.nextOne.visibility = View.VISIBLE
         }
-        binding.step2. setOnClickListener {
+        binding.nextOne. setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
+            binding.control2.visibility = View.VISIBLE
+            binding.nextOne.visibility = View.GONE
         }
-        binding.step3 . setOnClickListener {
+        binding.backOne. setOnClickListener {
+            binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
+            binding.backOne.visibility = View.GONE
+            binding.control2.visibility = View.VISIBLE
+
+        }
+        binding.nextTwo . setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc3)
+            binding.control2.visibility = View.GONE
+            binding.backOne.visibility = View.VISIBLE
         }
 
     }
+
 }

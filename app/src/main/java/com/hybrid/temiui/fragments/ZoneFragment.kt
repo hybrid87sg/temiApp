@@ -2,8 +2,10 @@ package com.hybrid.temiui.fragments
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
@@ -18,12 +20,9 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
     private lateinit var binding: FragmentZoneBinding
     val robot = Robot.getInstance()
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentZoneBinding.bind(view)
-
-
 
 
         binding.ivZoneA.setOnClickListener {

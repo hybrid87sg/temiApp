@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeBtmNav"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/zoneBtmNav"
+        android:title="@string/zones"
+        android:icon="@drawable/ic_map"/>
+    <item
+        android:id="@+id/wifiBtmNav"
+        android:title="@string/wifi"
+        android:icon="@drawable/ic_wifi"/>
+</menu>

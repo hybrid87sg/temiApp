@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="800dp"
+    android:background="@drawable/button_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.CustomDialogFragment">
 
@@ -12,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="800dp"
         android:layout_centerInParent="true"
-        app:tint="@color/coral"
+        app:tint="@color/dblue"
         android:tintMode="add"
-        android:background="@color/dblue"
+        android:background="@color/white"
         android:scaleType="center"
         android:src="@drawable/wifi" />
 
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/tvwifi"
-        android:textColor="@color/white"
+        android:textColor="@color/dblue"
         android:textSize="50sp"
         android:fontFamily="@font/qanelas_semibold"
         android:textAlignment="center"
