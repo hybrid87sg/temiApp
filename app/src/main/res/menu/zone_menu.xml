@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/zones"
+        android:title="@string/zones"
+        />
+    <item
+        android:id="@+id/brands"
+        android:title="@string/brands"
+        />
+    <item
+        android:id="@+id/utils"
+        android:title="@string/utils"
+        />
+</menu>

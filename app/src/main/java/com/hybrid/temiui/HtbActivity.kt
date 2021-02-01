@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
 import com.hybrid.temiui.databinding.ActivityHtbBinding
 
 class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
@@ -16,6 +17,7 @@ class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        val fadeIn = AnimationUtils.loadAnimation(this,R.anim.fade_in)
 
         binding.llHome.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
@@ -25,12 +27,15 @@ class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
 
         binding.step1.setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc1)
+            binding.ivHtb.startAnimation(fadeIn)
         }
         binding.step2. setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc2)
+            binding.ivHtb.startAnimation(fadeIn)
         }
         binding.step3 . setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc3)
+            binding.ivHtb.startAnimation(fadeIn)
         }
     }
 }
