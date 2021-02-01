@@ -3,9 +3,6 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.animation.AnimationUtils
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
 import com.hybrid.temiui.databinding.ActivityMainBinding
 import com.hybrid.temiui.fragments.CustomDialogFragment
 
@@ -19,7 +16,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-        val scaleUp = AnimationUtils.loadAnimation(this,R.anim.scale_up)
+
+        val intentMap = Intent(this,MapActivity::class.java)
+
+        val intent = Intent(this, MainActivity::class.java)
+
+        val dialog = CustomDialogFragment()
 
         binding.btnHtc.setOnClickListener {
             val intent = Intent(this,HtcActivity::class.java)
@@ -34,11 +36,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             startActivity(intent)
         }
 
-        binding.ivWifi.setOnClickListener {
-            val dialog = CustomDialogFragment()
-            dialog.show(supportFragmentManager,"Custom")
-        }
 
+        binding.btmNavBar.setOnNavigationItemSelectedListener{
+            when(it.itemId){
+                R.id.homeBtmNav -> startActivity(intent)
+                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
+                R.id.zoneBtmNav -> startActivity(intentMap)
+            }
+            true
+        }
 
 
     }

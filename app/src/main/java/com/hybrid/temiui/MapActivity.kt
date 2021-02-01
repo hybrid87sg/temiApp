@@ -3,15 +3,16 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
 import com.hybrid.temiui.fragments.*
+import com.robotemi.sdk.Robot
 
 
 class MapActivity : AppCompatActivity(R.layout.activity_map) {
 
     private lateinit var binding: ActivityMapBinding
+    val robot = Robot.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,12 +21,12 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        robot.hideTopBar()
 
 
         val fragmentZone = ZoneFragment()
         val fragmentBrands = BrandsFragment()
         val fragmentUtils = UtilsFragment()
-        val fragmentMap = MapFragment()
 
         val intent = Intent(this, MainActivity::class.java)
 
@@ -51,7 +52,6 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
             }
             true
         }
-
 
     }
 

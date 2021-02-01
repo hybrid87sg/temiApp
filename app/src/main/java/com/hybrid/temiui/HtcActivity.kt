@@ -42,22 +42,26 @@ class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc1)
             binding.control2.visibility = View.GONE
             binding.nextOne.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step1)
         }
         binding.nextOne. setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
             binding.control2.visibility = View.VISIBLE
             binding.nextOne.visibility = View.GONE
+            binding.tvHtc.text = getText(R.string.step2)
         }
         binding.backOne. setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
             binding.backOne.visibility = View.GONE
             binding.control2.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step2)
 
         }
         binding.nextTwo . setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc3)
             binding.control2.visibility = View.GONE
             binding.backOne.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step3)
         }
 
     }

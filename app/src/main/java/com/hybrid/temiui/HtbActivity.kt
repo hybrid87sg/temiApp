@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
 import com.hybrid.temiui.databinding.ActivityHtbBinding
+import com.hybrid.temiui.fragments.CustomDialogFragment
 
 class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
     
@@ -17,25 +18,46 @@ class HtbActivity : AppCompatActivity(R.layout.activity_htb) {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-        val fadeIn = AnimationUtils.loadAnimation(this,R.anim.fade_in)
+        val intentMap = Intent(this,MapActivity::class.java)
 
-        binding.llHome.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        val intent = Intent(this, MainActivity::class.java)
+
+        val dialog = CustomDialogFragment()
+
+
+        binding.btmNavBar.setOnNavigationItemSelectedListener{
+            when(it.itemId){
+                R.id.homeBtmNav -> startActivity(intent)
+                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
+                R.id.zoneBtmNav -> startActivity(intentMap)
+            }
+            true
         }
 
-        binding.step1.setOnClickListener {
+        binding.backTwo.setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc1)
-            binding.ivHtb.startAnimation(fadeIn)
+            binding.control2.visibility = View.GONE
+            binding.nextOne.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step1)
         }
-        binding.step2. setOnClickListener {
+        binding.nextOne. setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc2)
-            binding.ivHtb.startAnimation(fadeIn)
+            binding.control2.visibility = View.VISIBLE
+            binding.nextOne.visibility = View.GONE
+            binding.tvHtc.text = getText(R.string.step2)
         }
-        binding.step3 . setOnClickListener {
+        binding.backOne. setOnClickListener {
+            binding.ivHtb.setImageResource(R.drawable.temiux_htc2)
+            binding.backOne.visibility = View.GONE
+            binding.control2.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step2)
+
+        }
+        binding.nextTwo . setOnClickListener {
             binding.ivHtb.setImageResource(R.drawable.temiux_htc3)
-            binding.ivHtb.startAnimation(fadeIn)
+            binding.control2.visibility = View.GONE
+            binding.backOne.visibility = View.VISIBLE
+            binding.tvHtc.text = getText(R.string.step3)
         }
     }
 }

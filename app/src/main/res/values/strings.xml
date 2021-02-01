@@ -6,7 +6,7 @@
     <string name="home">Home</string>
     <string name="homely">Homely</string>
     <string name="wifi">Wifi Connect</string>
-    <string name="tvwifi">Scan me to connect to our Wifi!!</string>
+    <string name="tvwifi">Scan QR code to connect to our Wifi!!</string>
 
     <string name="next">Next Step</string>
     <string name="back">Previous Step</string>

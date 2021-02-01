@@ -35,6 +35,18 @@
         android:layout_alignParentTop="true"
         android:src="@drawable/temiux_htc1" />
 
+    <TextView
+        android:id="@+id/tvHtc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/step1"
+        android:textSize="80sp"
+        android:fontFamily="@font/qanelas_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        />
+
     <FrameLayout
         android:layout_centerInParent="true"
         android:layout_width="match_parent"

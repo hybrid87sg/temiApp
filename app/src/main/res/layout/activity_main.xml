@@ -59,18 +59,25 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/ivWifi"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:scaleType="center"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="40dp"
-        app:tint="@color/coral"
-        android:tintMode="screen"
-        android:src="@drawable/wifi" />
+        android:background="@color/coral"
+        android:fitsSystemWindows="true"
+        app:elevation="1dp"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@color/dblue"
+        app:itemRippleColor="@color/white"
+        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.MidFont"
+        app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.MidFont"
+        app:itemTextColor="@color/dblue"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/btm_nav_menu" />
 
 
 </RelativeLayout>
