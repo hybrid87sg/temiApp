@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="TextAppearance.AppCompat.MidFont">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="fontFamily">@font/qanelas_semibold</item>
         <item name="color">@color/dblue</item>
     </style>

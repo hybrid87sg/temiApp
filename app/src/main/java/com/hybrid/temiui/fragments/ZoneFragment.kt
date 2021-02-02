@@ -1,18 +1,13 @@
 package com.hybrid.temiui.fragments
 
-import android.app.AlertDialog
+
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentZoneBinding
 import com.robotemi.sdk.Robot
+import com.robotemi.sdk.TtsRequest
 
 
 class ZoneFragment : Fragment(R.layout.fragment_zone) {
@@ -57,6 +52,7 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
 
         binding.a1.setOnClickListener {
             //robot.goTo("a1")
+            robot.speak(TtsRequest.create("Follow me to A1",false))
 
         }
 

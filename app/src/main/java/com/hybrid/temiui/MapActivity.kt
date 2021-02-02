@@ -3,6 +3,7 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
 import com.hybrid.temiui.fragments.*
@@ -27,10 +28,13 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         val fragmentZone = ZoneFragment()
         val fragmentBrands = BrandsFragment()
         val fragmentUtils = UtilsFragment()
+        val fragmentMap = MapFragment()
 
         val intent = Intent(this, MainActivity::class.java)
 
         val dialog = CustomDialogFragment()
+        val dialogZone = ViewZoneFragment()
+
 
 
         setCurrentFragment(fragmentZone)
@@ -47,10 +51,21 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         binding.btmNavBar.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.homeBtmNav -> startActivity(intent)
-                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
-                R.id.zoneBtmNav -> setCurrentFragment(fragmentZone)
+                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Wifi")
+                R.id.zoneBtmNav -> dialogZone.show(supportFragmentManager,"Zone Views")
             }
             true
+        }
+
+        //btmNavBarLayout
+        binding.llHome.setOnClickListener {
+            startActivity(intent)
+        }
+        binding.llZone.setOnClickListener {
+            dialogZone.show(supportFragmentManager,"Zone Views")
+        }
+        binding.llWifi.setOnClickListener {
+            dialog.show(supportFragmentManager,"Wifi")
         }
 
     }

@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/zoneBtmNav"
-        android:title="@string/zones"
+        android:title="@string/viewselect"
         android:icon="@drawable/ic_map"/>
     <item
         android:id="@+id/wifiBtmNav"
