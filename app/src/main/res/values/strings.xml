@@ -60,9 +60,9 @@
     <string name="step1">Step 1</string>
     <string name="step2">Step 2</string>
     <string name="step3">Step 3</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="whichview">Which view do you want to see?</string>
     <string name="viewselect">View Select</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
