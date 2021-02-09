@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/coral"
-    tools:context=".HtbActivity">
+    tools:context=".fragments.HtbFragment">
 
     <ImageView
         android:id="@+id/ivHtb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_above="@id/btmNavBar"
-        android:src="@drawable/temiux_htc1"/>
+        android:scaleType="fitCenter"
+        android:src="@drawable/temiux_htp1"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btmNavBar"
@@ -24,6 +25,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/coral"
         android:fitsSystemWindows="true"
+        android:visibility="gone"
         app:elevation="1dp"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconSize="25dp"
@@ -36,7 +38,7 @@
         app:menu="@menu/btm_nav_menu" />
 
     <TextView
-        android:id="@+id/tvHtc"
+        android:id="@+id/tvHtp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/step1"

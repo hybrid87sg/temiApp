@@ -5,12 +5,10 @@
         android:id="@+id/zones"
         android:title="@string/zones"
         />
-    <item android:title=" " />
     <item
         android:id="@+id/brands"
         android:title="@string/brands"
         />
-    <item android:title=" " />
     <item
         android:id="@+id/utils"
         android:title="@string/utils"

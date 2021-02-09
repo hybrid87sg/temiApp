@@ -1,15 +1,16 @@
 package com.hybrid.temiui.fragments.adapter
 
 import android.annotation.SuppressLint
-import android.widget.ImageView
-import com.hybrid.temiui.fragments.model.GridZone
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.TextView
 import com.hybrid.temiui.R
+import com.hybrid.temiui.fragments.model.GridItem
+import com.hybrid.temiui.fragments.model.GridItemB
 
-class GridZoneAdapter(var context: Context,var arrayList: ArrayList<GridZone>) : BaseAdapter() {
+class GridZoneAdapter(var context: Context, var arrayList: ArrayList<GridItemB>) : BaseAdapter() {
     override fun getCount(): Int {
         return arrayList.size
     }
@@ -25,11 +26,11 @@ class GridZoneAdapter(var context: Context,var arrayList: ArrayList<GridZone>) :
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view:View = View.inflate(context, R.layout.zone_grid,null)
-        val icons:ImageView = view.findViewById(R.id.ivZoneView)
+        val icons:TextView = view.findViewById(R.id.ivZoneView)
 
-        val lisItem:GridZone = arrayList[position]
+        val listItem:GridItemB = arrayList[position]
 
-        icons.setImageResource(lisItem.icons!!)
+        icons.text = listItem.name
 
 
 

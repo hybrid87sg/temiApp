@@ -11,18 +11,18 @@
         android:id="@+id/tvHomely"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/homely"
         android:layout_centerHorizontal="true"
-        android:textSize="100sp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/qanelas_semibold"
+        android:text="@string/homely"
         android:textColor="@color/white"
-        android:fontFamily="@font/qanelas_semibold"/>
+        android:textSize="100sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnHtc"
@@ -38,12 +38,12 @@
             android:id="@+id/btnHtb"
             android:layout_width="220dp"
             android:layout_height="300dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
             android:background="@drawable/button_menu"
             android:fontFamily="@font/qanelas_extrabold"
             android:lines="3"
             android:text="@string/htb"
-            android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
             android:textSize="30sp" />
 
         <Button
@@ -59,25 +59,109 @@
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btmNavBar"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/btmNavLayout"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/coral"
-        android:fitsSystemWindows="true"
-        app:elevation="1dp"
-        app:itemHorizontalTranslationEnabled="true"
-        app:itemIconSize="25dp"
-        app:itemIconTint="@color/dblue"
-        app:itemRippleColor="@color/white"
-        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.MidFont"
-        app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.MidFont"
-        app:itemTextColor="@color/dblue"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/btm_nav_menu" />
+        android:layout_marginBottom="15dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/dblue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/qanelas_semibold"
+                    android:gravity="center_vertical"
+                    android:text="@string/home"
+                    android:textColor="@color/dblue"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/llZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_map"
+                    app:tint="@color/dblue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qanelas_semibold"
+                    android:gravity="center_vertical"
+                    android:text="@string/viewselect"
+                    android:textColor="@color/dblue"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/llWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_wifi"
+                    app:tint="@color/dblue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qanelas_semibold"
+                    android:gravity="center_vertical"
+                    android:text="@string/wifi"
+                    android:textColor="@color/dblue"
+                    android:textSize="50sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/mainFrome"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/btmNavLayout"/>
 
 
 </RelativeLayout>

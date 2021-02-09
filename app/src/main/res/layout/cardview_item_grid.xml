@@ -11,6 +11,7 @@
         android:layout_width="130dp"
         android:text="@string/a1"
         android:gravity="center"
+        android:textAllCaps="true"
         android:textSize="40sp"
         android:background="@drawable/button_menu"
         android:textColor="@color/white"

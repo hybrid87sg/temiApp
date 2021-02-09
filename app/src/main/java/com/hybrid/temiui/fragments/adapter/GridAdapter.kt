@@ -1,6 +1,7 @@
 package com.hybrid.temiui.fragments.adapter
 
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -23,13 +24,14 @@ class GridAdapter(var context: Context,var arrayList: ArrayList<GridItem>) : Bas
         return position.toLong()
     }
 
+    @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var view:View = View.inflate(context, R.layout.cardview_item_grid,null)
+        val view:View = View.inflate(context, R.layout.cardview_item_grid,null)
         val icons:TextView = view.findViewById(R.id.gridButton)
 
-        val lisItem:GridItem = arrayList[position]
+        val listItem:GridItem = arrayList[position]
 
-        icons.text = lisItem.name
+        icons.text = listItem.name
 
 
 

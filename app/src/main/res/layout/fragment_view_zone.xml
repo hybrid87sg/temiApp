@@ -42,28 +42,29 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/mapView"
+            android:id="@+id/zoneView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="130dp"
+            <ImageButton
+                android:id="@+id/ibZonebtn"
+                android:layout_width="200dp"
                 android:layout_height="130dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/coral"
-                android:scaleType="centerInside"
+                android:scaleType="fitCenter"
                 android:src="@drawable/zone_view" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnZoneView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/qanelas_semibold"
                 android:text="@string/zoneview"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:backgroundTint="@color/coral"/>
+
         </LinearLayout>
 
         <Space
@@ -71,27 +72,25 @@
             android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:id="@+id/zoneView"
+            android:id="@+id/mapView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="130dp"
+            <ImageButton
+                android:layout_width="200dp"
                 android:layout_height="130dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/coral"
-                android:src="@drawable/map_view" />
-
-            <TextView
+                android:src="@drawable/map_view"
+                android:scaleType="fitCenter"/>
+            <Button
+                android:id="@+id/btnMapView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/qanelas_semibold"
                 android:text="@string/mapview"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:layout_gravity="center"/>
+
         </LinearLayout>
     </LinearLayout>
 

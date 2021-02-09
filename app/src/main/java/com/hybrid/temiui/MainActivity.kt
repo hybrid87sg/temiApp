@@ -3,8 +3,13 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMainBinding
 import com.hybrid.temiui.fragments.CustomDialogFragment
+import com.hybrid.temiui.fragments.HtbFragment
+import com.hybrid.temiui.fragments.HtcFragment
+import com.hybrid.temiui.fragments.ViewZoneFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -17,35 +22,47 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         supportActionBar?.hide()
 
-        val intentMap = Intent(this,MapActivity::class.java)
-
-        val intent = Intent(this, MainActivity::class.java)
-
         val dialog = CustomDialogFragment()
+        val dialogZone = ViewZoneFragment()
+
+        val htcFragment = HtcFragment()
+        val htbFragment = HtbFragment()
+
+        val intentHtn = Intent(this,MapActivity::class.java)
+
+        setCurrentFragment(htcFragment)
 
         binding.btnHtc.setOnClickListener {
-            val intent = Intent(this,HtcActivity::class.java)
-            startActivity(intent)
+            binding.mainFrome.visibility = View.VISIBLE
+            setCurrentFragment(htcFragment)
         }
+
         binding.btnHtb.setOnClickListener {
-            val intent = Intent(this,HtbActivity::class.java)
-            startActivity(intent)
+            binding.mainFrome.visibility = View.VISIBLE
+            setCurrentFragment(htbFragment)
         }
+
         binding.btnHtn.setOnClickListener {
-            val intent = Intent(this,MapActivity::class.java)
-            startActivity(intent)
+            startActivity(intentHtn)
         }
 
+        //btmNavBarLayout
+        binding.llHome.setOnClickListener {
+            binding.mainFrome.visibility = View.GONE
+        }
+        binding.llZone.setOnClickListener {
+            dialogZone.show(supportFragmentManager, "Zone Views")
+        }
+        binding.llWifi.setOnClickListener {
+            dialog.show(supportFragmentManager, "Wifi")
+        }
 
-        binding.btmNavBar.setOnNavigationItemSelectedListener{
-            when(it.itemId){
-                R.id.homeBtmNav -> startActivity(intent)
-                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
-                R.id.zoneBtmNav -> startActivity(intentMap)
+    }
+
+    private fun setCurrentFragment(fragment: Fragment) {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.mainFrome,fragment)
+                commit()
             }
-            true
-        }
-
-
     }
 }

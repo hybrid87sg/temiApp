@@ -1,42 +1,21 @@
-package com.hybrid.temiui
+package com.hybrid.temiui.fragments
 
 import android.content.Intent
-import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.hybrid.temiui.databinding.ActivityHtcBinding
-import com.hybrid.temiui.fragments.CustomDialogFragment
-import com.hybrid.temiui.fragments.MapFragment
-import com.ismaeldivita.chipnavigation.ChipNavigationBar
+import com.hybrid.temiui.MainActivity
+import com.hybrid.temiui.R
+import com.hybrid.temiui.databinding.FragmentHtcBinding
 
-class HtcActivity : AppCompatActivity(R.layout.activity_htc) {
+class HtcFragment : Fragment(R.layout.fragment_htc) {
 
-    private lateinit var binding: ActivityHtcBinding
+    private lateinit var binding: FragmentHtcBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityHtcBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        supportActionBar?.hide()
-
-        val intentMap = Intent(this,MapActivity::class.java)
-
-        val intent = Intent(this, MainActivity::class.java)
-
-        val dialog = CustomDialogFragment()
-
-
-        binding.btmNavBar.setOnNavigationItemSelectedListener{
-            when(it.itemId){
-                R.id.homeBtmNav -> startActivity(intent)
-                R.id.wifiBtmNav -> dialog.show(supportFragmentManager,"Custom")
-                R.id.zoneBtmNav -> startActivity(intentMap)
-            }
-            true
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentHtcBinding.bind(view)
 
         binding.backTwo.setOnClickListener {
             binding.ivHtc.setImageResource(R.drawable.temiux_htc1)

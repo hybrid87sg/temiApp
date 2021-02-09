@@ -5,7 +5,7 @@
     <string name="zoneview">Zone View</string>
     <string name="home">Home</string>
     <string name="homely">Homely</string>
-    <string name="wifi">Wifi Connect</string>
+    <string name="wifi">Connect to Free Wifi</string>
     <string name="tvwifi">Scan QR code to connect to our Wifi</string>
 
     <string name="next">Next Step</string>
@@ -17,7 +17,7 @@
     <string name="pause">Pause Movement</string>
     <string name="change">Change Direction</string>
 
-    <string name="maptitle">Select a button below to navigate</string>
+    <string name="maptitle">Select to navigate to zone</string>
 
     //Zones - All
     <string name="zoneA">Zone A</string>
@@ -39,6 +39,17 @@
     <string name="a7">A7</string>
     <string name="a8">A8</string>
     <string name="a9">A9</string>
+
+    <string-array name="Zones">
+        <item> </item>
+        <item>Zone A</item>
+        <item>Zone B</item>
+        <item>Zone C</item>
+        <item>Zone D</item>
+        <item>Zone E</item>
+        <item>Zone F</item>
+        <item>Zone G</item>
+    </string-array>
 
     //Zone B
     <string name="b1">B1</string>
