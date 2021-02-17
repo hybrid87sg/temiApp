@@ -41,7 +41,7 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
 
     private fun setupTabs(){
         val adapter = ViewPagerAdapter(childFragmentManager)
-        adapter.addFragment(CommonFragment(),"${getString(R.string.popular)}")
+        adapter.addFragment(CommonFragment(), getString(R.string.popular))
         adapter.addFragment(GridAFragment(),"Zone A")
         adapter.addFragment(GridBFragment(),"Zone B")
         adapter.addFragment(GridCFragment(),"Zone C")
@@ -51,6 +51,14 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
         adapter.addFragment(GridGFragment(),"Zone G")
         binding.viewPager.adapter = adapter
         binding.zoneTab.setupWithViewPager(binding.viewPager)
+        binding.zoneTab.getTabAt(0)?.text = getString(R.string.popular)
+        binding.zoneTab.getTabAt(1)?.text = getString(R.string.zoneA)
+        binding.zoneTab.getTabAt(2)?.text = getString(R.string.zoneB)
+        binding.zoneTab.getTabAt(3)?.text = getString(R.string.zoneC)
+        binding.zoneTab.getTabAt(4)?.text = getString(R.string.zoneD)
+        binding.zoneTab.getTabAt(5)?.text = getString(R.string.zoneE)
+        binding.zoneTab.getTabAt(6)?.text = getString(R.string.zoneF)
+        binding.zoneTab.getTabAt(7)?.text = getString(R.string.zoneG)
 
     }
 
