@@ -49,7 +49,7 @@
     <string name="b7">B7</string>
     <string name="b8">B8</string>
     <string name="b9">B9</string>
-    
+
     //Zone C
     <string name="c1">C1</string>
     <string name="c2">C2</string>
@@ -57,6 +57,30 @@
     <string name="c4">C4</string>
     <string name="c5">C5</string>
     <string name="c6">C6</string>
+    
+    //Zone D
+    <string name="d1">d1</string>
+    <string name="d2">d2</string>
+    <string name="d3">d3</string>
+    <string name="d4">d4</string>
+    <string name="d5">d5</string>
+    <string name="d6">d6</string>
+    
+    //Zone E
+    <string name="e1">e1</string>
+    <string name="e2">e2</string>
+    <string name="e3">e3</string>
+    <string name="e4">e4</string>
+    <string name="e5">e5</string>
+    <string name="e6">e6</string>
+    
+    //Zone F
+    <string name="f1">f1</string>
+    <string name="f2">f2</string>
+    <string name="f3">f3</string>
+    <string name="f4">f4</string>
+    <string name="f5">f5</string>
+    <string name="f6">f6</string>
 
     //Zone G
     <string name="g1">G1</string>
@@ -78,7 +102,7 @@
     <string name="whichview">Which view do you want to see?</string>
     <string name="viewselect">Zone Navigation</string>
 
-    <string name="popular">Popular locations in Homely</string>
+    <string name="popular">Popular locations</string>
 
     <string-array name="Zoning">
         <item>Zone A</item>

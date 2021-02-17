@@ -5,8 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/coral"
-    android:padding="40dp"
+    android:padding="30dp"
     tools:context=".fragments.ZoneFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/zoneTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTop"
+        android:layout_marginTop="20dp"
+        app:tabBackground="@color/coral"
+        app:tabGravity="fill"
+        app:tabTextColor="@color/dblue">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneA" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneB" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneC" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneD" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneE" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneF" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneG" />
+    </com.google.android.material.tabs.TabLayout>
 
     <LinearLayout
         android:id="@+id/llMenu"
@@ -14,20 +66,14 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_marginEnd="20dp"
-        android:orientation="vertical">
-
-        <Spinner
-            android:id="@+id/zoneSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dialog"
-            />
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <Button
             android:id="@+id/common"
             android:layout_width="200dp"
             android:layout_height="80dp"
-            android:text="Popular \nLocations"
+            android:text="@string/popular"
             android:textSize="20sp" />
 
         <Button
@@ -43,11 +89,33 @@
             android:layout_height="80dp"
             android:text="@string/zoneB"
             android:textSize="30sp" />
+
         <Button
             android:id="@+id/btnZoneC"
             android:layout_width="200dp"
             android:layout_height="80dp"
             android:text="@string/zoneC"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnZoneD"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="@string/zoneD"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnZoneE"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="@string/zoneE"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnZoneF"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="@string/zoneF"
             android:textSize="30sp" />
 
         <Button
@@ -59,12 +127,20 @@
 
     </LinearLayout>
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/zoneTab"/>
+
     <FrameLayout
         android:id="@+id/fragment"
         android:name="com.hybrid.temiui.fragments.GridAFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/titleTop"
+        android:visibility="gone"
         android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/llMenu" />
 
