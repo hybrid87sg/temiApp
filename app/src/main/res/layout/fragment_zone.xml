@@ -16,17 +16,46 @@
         android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
+        <Spinner
+            android:id="@+id/zoneSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            />
+
+        <Button
+            android:id="@+id/common"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Popular \nLocations"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/btnZoneA"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/zoneA" />
+            android:layout_height="80dp"
+            android:text="@string/zoneA"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btnZoneB"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/zoneB" />
+            android:layout_height="80dp"
+            android:text="@string/zoneB"
+            android:textSize="30sp" />
+        <Button
+            android:id="@+id/btnZoneC"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="@string/zoneC"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnZoneG"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="@string/zoneG"
+            android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -35,6 +64,7 @@
         android:name="com.hybrid.temiui.fragments.GridAFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/titleTop"
         android:layout_marginTop="30dp"
         android:layout_toEndOf="@id/llMenu" />
 
@@ -46,7 +76,7 @@
         android:layout_toEndOf="@id/llMenu"
         android:fontFamily="@font/qanelas_semibold"
         android:gravity="center_horizontal"
-        android:text="@string/maptitle"
+        android:text="@string/popular"
         android:textColor="@color/white"
         android:textSize="40sp" />
 

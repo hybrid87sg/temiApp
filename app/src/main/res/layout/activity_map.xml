@@ -59,34 +59,6 @@
                 android:layout_height="wrap_content" />
 
             <LinearLayout
-                android:id="@+id/llZone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/ic_location"
-                    app:tint="@color/dblue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/qanelas_semibold"
-                    android:gravity="center_vertical"
-                    android:text="@string/viewselect"
-                    android:textColor="@color/dblue"
-                    android:textSize="35sp" />
-            </LinearLayout>
-
-            <Space
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                />
-
-            <LinearLayout
                 android:id="@+id/llMap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,6 +85,33 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/llZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/dblue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qanelas_semibold"
+                    android:gravity="center_vertical"
+                    android:text="@string/zoneview"
+                    android:textColor="@color/dblue"
+                    android:textSize="35sp" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/llWifi"

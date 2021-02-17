@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">TemiUI</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="mapview">Map View</string>
     <string name="zoneview">Zone View</string>
     <string name="home">Home</string>
@@ -17,7 +16,7 @@
     <string name="pause">Pause Movement</string>
     <string name="change">Change Direction</string>
 
-    <string name="maptitle">Select to navigate to zone</string>
+    <string name="maptitle">Select a button below to navigate Homely</string>
 
     //Zones - All
     <string name="zoneA">Zone A</string>
@@ -40,17 +39,6 @@
     <string name="a8">A8</string>
     <string name="a9">A9</string>
 
-    <string-array name="Zones">
-        <item> </item>
-        <item>Zone A</item>
-        <item>Zone B</item>
-        <item>Zone C</item>
-        <item>Zone D</item>
-        <item>Zone E</item>
-        <item>Zone F</item>
-        <item>Zone G</item>
-    </string-array>
-
     //Zone B
     <string name="b1">B1</string>
     <string name="b2">B2</string>
@@ -61,19 +49,42 @@
     <string name="b7">B7</string>
     <string name="b8">B8</string>
     <string name="b9">B9</string>
+    
+    //Zone C
+    <string name="c1">C1</string>
+    <string name="c2">C2</string>
+    <string name="c3">C3</string>
+    <string name="c4">C4</string>
+    <string name="c5">C5</string>
+    <string name="c6">C6</string>
+
+    //Zone G
+    <string name="g1">G1</string>
+    <string name="g2">G2</string>
+    <string name="g3">G3</string>
 
     //Menu
     <string name="zones">Zones</string>
     <string name="brands">Brands</string>
+    <string name="haylee">Haylee</string>
+
     <string name="utils">Utilities</string>
 
     //Nav Buttons
     <string name="step1">Step 1</string>
     <string name="step2">Step 2</string>
     <string name="step3">Step 3</string>
-    <string name="whichview">Which view do you want to see?</string>
-    <string name="viewselect">View Select</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="whichview">Which view do you want to see?</string>
+    <string name="viewselect">Zone Navigation</string>
+
+    <string name="popular">Popular locations in Homely</string>
+
+    <string-array name="Zoning">
+        <item>Zone A</item>
+        <item>Zone B</item>
+        <item>Zone C</item>
+        <item>Zone D</item>
+    </string-array>
 
 </resources>

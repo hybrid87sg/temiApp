@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/coral"
+    tools:context=".fragments.CommonFragment">
+
+    <GridLayout
+        android:id="@+id/commonGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <ImageButton
+            android:id="@+id/ibInfo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:src="@drawable/showmewhere_utilities_infocounter" />
+
+        <ImageButton
+            android:id="@+id/ibCoffee"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:src="@drawable/showmewhere_utilities_coffeebar" />
+
+        <ImageButton
+            android:id="@+id/ibToilet"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/clear"
+            android:layout_marginStart="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/showmewhere_utilities_toilet" />
+
+        <ImageButton
+            android:id="@+id/ibHaylee"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/showmewhere_brands_haylee" />
+
+        <ImageButton
+            android:id="@+id/ibDecor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:src="@drawable/showmewhere_utilities_decornmore" />
+
+        <ImageButton
+            android:id="@+id/ibNewArrivals"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@color/clear"
+            android:scaleType="fitCenter"
+            android:src="@drawable/showmewhere_brands_newarrivals" />
+    </GridLayout>
+
+</RelativeLayout>

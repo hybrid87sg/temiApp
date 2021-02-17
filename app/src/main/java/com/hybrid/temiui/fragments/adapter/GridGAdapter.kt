@@ -1,5 +1,6 @@
 package com.hybrid.temiui.fragments.adapter
 
+
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -7,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.hybrid.temiui.R
-import com.hybrid.temiui.fragments.model.GridItemA
+import com.hybrid.temiui.fragments.model.GridItemG
 
-class GridZoneAdapter(var context: Context, var arrayList: ArrayList<GridItemA>) : BaseAdapter() {
+class GridGAdapter(var context: Context, var arrayList: ArrayList<GridItemG>) : BaseAdapter() {
     override fun getCount(): Int {
         return arrayList.size
     }
@@ -24,10 +25,10 @@ class GridZoneAdapter(var context: Context, var arrayList: ArrayList<GridItemA>)
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view:View = View.inflate(context, R.layout.zone_grid,null)
-        val icons:TextView = view.findViewById(R.id.ivZoneView)
+        val view:View = View.inflate(context, R.layout.cardview_item_grid,null)
+        val icons:TextView = view.findViewById(R.id.gridButton)
 
-        val listItem:GridItemA = arrayList[position]
+        val listItem:GridItemG = arrayList[position]
 
         icons.text = listItem.name
 

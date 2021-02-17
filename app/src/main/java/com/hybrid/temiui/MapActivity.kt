@@ -31,7 +31,7 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         setCurrentFragment(fragmentZone)
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flZone, fragmentZone)
+            replace(R.id.flZone, fragmentMap)
             commit()
 
             //btmNavBarLayout

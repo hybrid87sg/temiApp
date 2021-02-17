@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             binding.mainFrome.visibility = View.GONE
         }
         binding.llZone.setOnClickListener {
-            dialogZone.show(supportFragmentManager, "Zone Views")
+            val intent= Intent(this,MapActivity::class.java)
+            startActivity(intent)
         }
         binding.llWifi.setOnClickListener {
             dialog.show(supportFragmentManager, "Wifi")

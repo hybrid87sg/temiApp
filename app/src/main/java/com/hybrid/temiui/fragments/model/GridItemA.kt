@@ -1,6 +1,6 @@
 package com.hybrid.temiui.fragments.model
 
-class GridItem {
+class GridItemA {
 
     var icons:Int ? =0
     var name:String ? = null

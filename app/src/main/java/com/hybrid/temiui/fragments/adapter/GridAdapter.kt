@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.hybrid.temiui.R
-import com.hybrid.temiui.fragments.model.GridItem
-import java.util.zip.Inflater
+import com.hybrid.temiui.fragments.model.GridItemA
 
-class GridAdapter(var context: Context,var arrayList: ArrayList<GridItem>) : BaseAdapter() {
+class GridAdapter(var context: Context, var arrayList: ArrayList<GridItemA>) : BaseAdapter() {
     override fun getCount(): Int {
         return arrayList.size
     }
@@ -29,7 +28,7 @@ class GridAdapter(var context: Context,var arrayList: ArrayList<GridItem>) : Bas
         val view:View = View.inflate(context, R.layout.cardview_item_grid,null)
         val icons:TextView = view.findViewById(R.id.gridButton)
 
-        val listItem:GridItem = arrayList[position]
+        val listItem:GridItemA = arrayList[position]
 
         icons.text = listItem.name
 
