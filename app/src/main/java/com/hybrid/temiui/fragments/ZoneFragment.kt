@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.core.view.get
 import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentZoneBinding
 import com.hybrid.temiui.fragments.adapter.ViewPagerAdapter
@@ -16,27 +17,13 @@ import com.robotemi.sdk.Robot
 class ZoneFragment : Fragment(R.layout.fragment_zone) {
 
     private lateinit var binding: FragmentZoneBinding
-    private val robot = Robot.getInstance()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentZoneBinding.bind(view)
-/*
-        val gridAFragment = GridAFragment()
-        val gridBFragment = GridBFragment()
-        val gridCFragment = GridCFragment()
-        val gridDFragment = GridDFragment()
-        val gridEFragment = GridEFragment()
-        val gridFFragment = GridFFragment()
-        val gridGFragment = GridGFragment()
-        val commonFragment = CommonFragment()
-
-        childFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment, commonFragment)
-            commit()
-        }*/
 
         setupTabs()
+
     }
 
     private fun setupTabs(){
@@ -49,8 +36,12 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
         adapter.addFragment(GridEFragment(),"Zone E")
         adapter.addFragment(GridFFragment(),"Zone F")
         adapter.addFragment(GridGFragment(),"Zone G")
+        adapter.addFragment(BrandsFragment(),"Brands")
+        adapter.addFragment(UtilsFragment(),"Utilities")
+
         binding.viewPager.adapter = adapter
         binding.zoneTab.setupWithViewPager(binding.viewPager)
+
         binding.zoneTab.getTabAt(0)?.text = getString(R.string.popular)
         binding.zoneTab.getTabAt(1)?.text = getString(R.string.zoneA)
         binding.zoneTab.getTabAt(2)?.text = getString(R.string.zoneB)
@@ -59,7 +50,9 @@ class ZoneFragment : Fragment(R.layout.fragment_zone) {
         binding.zoneTab.getTabAt(5)?.text = getString(R.string.zoneE)
         binding.zoneTab.getTabAt(6)?.text = getString(R.string.zoneF)
         binding.zoneTab.getTabAt(7)?.text = getString(R.string.zoneG)
-
+        binding.zoneTab.getTabAt(8)?.text = getString(R.string.brands)
+        binding.zoneTab.getTabAt(9)?.text = getString(R.string.utils)
+        
     }
 
 

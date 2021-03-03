@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/mapMenu"
+        android:title="@string/viewselect" />
+    <item
+        android:id="@+id/qrMenu"
+        android:title="@string/wifi" />
+    <item
+        android:id="@+id/faqMenu"
+        android:title="@string/faq"/>
+
+
+</menu>

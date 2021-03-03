@@ -2,17 +2,53 @@ package com.hybrid.temiui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.Toast
 import com.hybrid.temiui.R
+import com.hybrid.temiui.databinding.FragmentBrandsBinding
+import com.hybrid.temiui.fragments.adapter.GridBrandsAdapter
+import com.hybrid.temiui.fragments.model.GridItemBrands
+import com.robotemi.sdk.Robot
 
-class BrandsFragment : Fragment() {
+class BrandsFragment : Fragment(R.layout.fragment_brands) , AdapterView.OnItemClickListener{
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_brands, container, false)
+    private lateinit var binding: FragmentBrandsBinding
+
+    private val robot = Robot.getInstance()
+
+    private var arrayList:ArrayList<GridItemBrands>?=null
+    private var gridAdapter :GridBrandsAdapter?=null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentBrandsBinding.bind(view)
+
+        arrayList = ArrayList()
+        arrayList = setDataList()
+        gridAdapter = context?.let{GridBrandsAdapter(it,arrayList!!)}
+        binding.gridBrands.adapter = gridAdapter
+        binding.gridBrands.onItemClickListener = this
+    }
+
+    private fun setDataList():ArrayList<GridItemBrands>{
+        val arrayList:ArrayList<GridItemBrands> = ArrayList()
+
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_haylee,"haylee"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_kanex,"kanex"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_newarrivals,"newarrivals"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_fynelinen,"fynelinen"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_beddingday,"beddingday"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_outdoor,"outdoor"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_softfurnishing,"softfurnishing"))
+        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_mattresszone,"mattresszone"))
+
+        return arrayList
+    }
+
+    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        val booth:GridItemBrands = arrayList!![position]
+        robot.goTo(booth.name.toString())
+        Toast.makeText(context,"Going to"+booth.name,Toast.LENGTH_SHORT).show()
     }
 }

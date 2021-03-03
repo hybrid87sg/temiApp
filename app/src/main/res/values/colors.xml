@@ -10,4 +10,5 @@
     <color name="coral">#f47f61</color>
     <color name="dblue">#2d3f67</color>
     <color name="clear">#00FDF1F1</color>
+    <color name="transblack">#4F000000</color>
 </resources>

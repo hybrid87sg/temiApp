@@ -1,6 +1,7 @@
 package com.hybrid.temiui.fragments
 
 import android.os.Bundle
+import android.text.TextUtils.replace
 import androidx.fragment.app.Fragment
 import android.view.View
 import com.hybrid.temiui.R
@@ -14,5 +15,9 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMapBinding.bind(view)
 
-    }
+
+
+        }
+
 }
+

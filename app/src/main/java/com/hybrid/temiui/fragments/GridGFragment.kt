@@ -35,9 +35,9 @@ class GridGFragment : Fragment(R.layout.fragment_grid_g),AdapterView.OnItemClick
     private fun setDataList():ArrayList<GridItemG>{
         val arrayList:ArrayList<GridItemG> = ArrayList()
 
-        arrayList.add(GridItemG(R.string.g1,"G1"))
-        arrayList.add(GridItemG(R.string.g2,"G2"))
-        arrayList.add(GridItemG(R.string.g3,"G3"))
+        arrayList.add(GridItemG(R.string.g1,"g1"))
+        arrayList.add(GridItemG(R.string.g2,"g2"))
+        arrayList.add(GridItemG(R.string.g3,"g3"))
 
         return arrayList
     }
@@ -45,7 +45,7 @@ class GridGFragment : Fragment(R.layout.fragment_grid_g),AdapterView.OnItemClick
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val booth:GridItemG = arrayList!![position]
         robot.goTo(booth.name.toString())
-        Toast.makeText(context,"Going to "+booth.name,Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"Going to "+ booth.name,Toast.LENGTH_LONG).show()
     }
 
 

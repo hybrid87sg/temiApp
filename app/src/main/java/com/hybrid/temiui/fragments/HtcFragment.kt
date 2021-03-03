@@ -1,13 +1,15 @@
 package com.hybrid.temiui.fragments
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.hybrid.temiui.MainActivity
+import coil.load
 import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentHtcBinding
+import com.hybrid.temiui.fragments.adapter.HtcPagerAdapter
+import com.hybrid.temiui.fragments.htcfragments.HtcStep1Fragment
+import com.hybrid.temiui.fragments.htcfragments.HtcStep2Fragment
+import com.hybrid.temiui.fragments.htcfragments.HtcStep3Fragment
 
 class HtcFragment : Fragment(R.layout.fragment_htc) {
 
@@ -17,32 +19,34 @@ class HtcFragment : Fragment(R.layout.fragment_htc) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHtcBinding.bind(view)
 
-        binding.backTwo.setOnClickListener {
-            binding.ivHtc.setImageResource(R.drawable.temiux_htc1)
-            binding.control2.visibility = View.GONE
-            binding.nextOne.visibility = View.VISIBLE
-            binding.tvHtc.text = getText(R.string.step1)
-        }
-        binding.nextOne. setOnClickListener {
-            binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
-            binding.control2.visibility = View.VISIBLE
-            binding.nextOne.visibility = View.GONE
-            binding.tvHtc.text = getText(R.string.step2)
-        }
-        binding.backOne. setOnClickListener {
-            binding.ivHtc.setImageResource(R.drawable.temiux_htc2)
-            binding.backOne.visibility = View.GONE
-            binding.control2.visibility = View.VISIBLE
-            binding.tvHtc.text = getText(R.string.step2)
+        binding.tvHtc.text = getString(R.string.htcdetail)
 
+        //setupTabs()
+
+        binding.stepBar1.setOnClickListener {
+            binding.ivHtc.load(R.drawable.temiux_htc1)
         }
-        binding.nextTwo . setOnClickListener {
-            binding.ivHtc.setImageResource(R.drawable.temiux_htc3)
-            binding.control2.visibility = View.GONE
-            binding.backOne.visibility = View.VISIBLE
-            binding.tvHtc.text = getText(R.string.step3)
+        binding.stepBar2.setOnClickListener {
+            binding.ivHtc.load(R.drawable.temiux_htc2)
+        }
+        binding.stepBar3.setOnClickListener {
+            binding.ivHtc.load(R.drawable.temiux_htc3)
         }
 
     }
+
+    /*private fun setupTabs(){
+        val adapter = HtcPagerAdapter(childFragmentManager)
+        adapter.addFragment(HtcStep1Fragment(),"Step1")
+        adapter.addFragment(HtcStep2Fragment(),"Step2")
+        adapter.addFragment(HtcStep3Fragment(),"Step3")
+
+        binding.vpHtc.adapter = adapter
+        binding.tabBar.setupWithViewPager(binding.vpHtc)
+
+        binding.tabBar.getTabAt(0)?.text = getString(R.string.step1)
+        binding.tabBar.getTabAt(1)?.text = getString(R.string.step2)
+        binding.tabBar.getTabAt(2)?.text = getString(R.string.step3)
+    }*/
 
 }

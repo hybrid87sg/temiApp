@@ -35,13 +35,13 @@ class GridBFragment : Fragment(R.layout.fragment_grid_b),AdapterView.OnItemClick
     private fun setDataList(): ArrayList<GridItemB> {
         val arrayList: ArrayList<GridItemB> = ArrayList()
 
-        arrayList.add(GridItemB(R.string.b1, "B1"))
-        arrayList.add(GridItemB(R.string.b2, "B2"))
-        arrayList.add(GridItemB(R.string.b3, "B3"))
-        arrayList.add(GridItemB(R.string.b4, "B4"))
-        arrayList.add(GridItemB(R.string.b5, "B5"))
-        arrayList.add(GridItemB(R.string.b6, "B6"))
-        arrayList.add(GridItemB(R.string.b7, "B7"))
+        arrayList.add(GridItemB(R.string.b1, "b1"))
+        arrayList.add(GridItemB(R.string.b2, "b2"))
+        arrayList.add(GridItemB(R.string.b3, "b3"))
+        arrayList.add(GridItemB(R.string.b4, "b4"))
+        arrayList.add(GridItemB(R.string.b5, "b5"))
+        arrayList.add(GridItemB(R.string.b6, "b6"))
+        arrayList.add(GridItemB(R.string.b7, "b7"))
 
         return arrayList
 

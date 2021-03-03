@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/coral"
-    android:padding="30dp"
+    android:padding="20dp"
     tools:context=".fragments.ZoneFragment">
 
     <com.google.android.material.tabs.TabLayout
@@ -131,7 +131,7 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_below="@id/zoneTab"/>
 
     <FrameLayout
@@ -152,7 +152,7 @@
         android:layout_toEndOf="@id/llMenu"
         android:fontFamily="@font/qanelas_semibold"
         android:gravity="center_horizontal"
-        android:text="@string/popular"
+        android:text="@string/navhomely"
         android:textColor="@color/white"
         android:textSize="40sp" />
 

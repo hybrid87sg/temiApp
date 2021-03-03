@@ -4,16 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.PopupMenu
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import coil.load
 import com.hybrid.temiui.databinding.ActivityMainBinding
-import com.hybrid.temiui.fragments.CustomDialogFragment
-import com.hybrid.temiui.fragments.HtbFragment
-import com.hybrid.temiui.fragments.HtcFragment
-import com.hybrid.temiui.fragments.ViewZoneFragment
+import com.hybrid.temiui.fragments.*
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var binding : ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,28 +24,54 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         supportActionBar?.hide()
 
-        val dialog = CustomDialogFragment()
-        val dialogZone = ViewZoneFragment()
 
+        val faqfragment = FaqFragment()
         val htcFragment = HtcFragment()
         val htbFragment = HtbFragment()
+        val mainFragment = MainFragment()
+
 
         val intentHtn = Intent(this,MapActivity::class.java)
 
-        setCurrentFragment(htcFragment)
+        binding.ivHomely.load("https://cdn.dynamicyield.com/api/8769097/images/3569b3b4c53f0__WFHEssentials_homepage_desktop.jpg")
 
-        binding.btnHtc.setOnClickListener {
-            binding.mainFrome.visibility = View.VISIBLE
+
+        /*binding.optionsBtn.setOnClickListener {
+            val popup = PopupMenu(this,binding.optionsBtn)
+            popup.inflate(R.menu.drawer_menu)
+            popup.setOnMenuItemClickListener {
+                when (it.itemId) {
+                    R.id.qrMenu -> {
+                        val view = View.inflate(this,R.layout.fragment_custom_dialog,null)
+                        val builder = AlertDialog.Builder(this)
+                        builder.setView(view)
+                        val dialog = builder.create()
+
+                        dialog.show()
+                        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+                    }
+                    R.id.mapMenu -> startActivity(intentHtn)
+
+                    R.id.faqMenu -> {
+                        setCurrentFragment(faqfragment)
+                    }
+                }
+                true
+            }
+            popup.show()
+        }*/
+
+        binding.htcBtn.setOnClickListener {
             setCurrentFragment(htcFragment)
-        }
-
-        binding.btnHtb.setOnClickListener {
             binding.mainFrome.visibility = View.VISIBLE
-            setCurrentFragment(htbFragment)
         }
 
-        binding.btnHtn.setOnClickListener {
-            startActivity(intentHtn)
+        binding.htbBtn.setOnClickListener {
+            setCurrentFragment(htbFragment)
+            binding.mainFrome.visibility = View.VISIBLE
+        }
+        binding.logo.setOnClickListener {
+            binding.mainFrome.visibility = View.GONE
         }
 
         //btmNavBarLayout
@@ -55,7 +83,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             startActivity(intent)
         }
         binding.llWifi.setOnClickListener {
-            dialog.show(supportFragmentManager, "Wifi")
+            val view = View.inflate(this,R.layout.fragment_custom_dialog,null)
+            val builder = AlertDialog.Builder(this)
+            builder.setView(view)
+            val dialog = builder.create()
+
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         }
 
     }

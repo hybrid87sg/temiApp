@@ -39,12 +39,17 @@ class GridEFragment : Fragment(R.layout.fragment_grid_e),AdapterView.OnItemClick
     private fun setDataList(): ArrayList<GridItemE> {
         val arrayList: ArrayList<GridItemE> = ArrayList()
 
-        arrayList.add(GridItemE(R.string.e1, "E1"))
-        arrayList.add(GridItemE(R.string.e2, "E2"))
-        arrayList.add(GridItemE(R.string.e3, "E3"))
-        arrayList.add(GridItemE(R.string.e4, "E4"))
-        arrayList.add(GridItemE(R.string.e5, "E5"))
-        arrayList.add(GridItemE(R.string.e6, "E6"))
+        arrayList.add(GridItemE(R.string.e1, "e1"))
+        arrayList.add(GridItemE(R.string.e2, "e2"))
+        arrayList.add(GridItemE(R.string.e3, "e3"))
+        arrayList.add(GridItemE(R.string.e4, "e4"))
+        arrayList.add(GridItemE(R.string.e5, "e5"))
+        arrayList.add(GridItemE(R.string.e6, "e6"))
+        arrayList.add(GridItemE(R.string.e7, "e7"))
+        arrayList.add(GridItemE(R.string.e8, "e8"))
+        arrayList.add(GridItemE(R.string.e9, "e9"))
+        arrayList.add(GridItemE(R.string.e10, "e10"))
+        arrayList.add(GridItemE(R.string.e11, "e11"))
 
         return arrayList
 

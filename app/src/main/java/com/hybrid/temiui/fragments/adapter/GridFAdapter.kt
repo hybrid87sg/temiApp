@@ -10,8 +10,9 @@ import android.widget.TextView
 import com.hybrid.temiui.R
 import com.hybrid.temiui.fragments.model.GridItemB
 import com.hybrid.temiui.fragments.model.GridItemC
+import com.hybrid.temiui.fragments.model.GridItemF
 
-class GridFAdapter(var context: Context, var arrayList: ArrayList<GridItemC>) : BaseAdapter() {
+class GridFAdapter(var context: Context, var arrayList: ArrayList<GridItemF>) : BaseAdapter() {
     override fun getCount(): Int {
         return arrayList.size
     }
@@ -29,7 +30,7 @@ class GridFAdapter(var context: Context, var arrayList: ArrayList<GridItemC>) : 
         val view:View = View.inflate(context, R.layout.cardview_item_grid,null)
         val icons:TextView = view.findViewById(R.id.gridButton)
 
-        val listItem: GridItemC = arrayList[position]
+        val listItem: GridItemF = arrayList[position]
 
         icons.text = listItem.name
 

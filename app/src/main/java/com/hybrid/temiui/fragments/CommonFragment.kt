@@ -27,6 +27,10 @@ class CommonFragment : Fragment(R.layout.fragment_common) {
             robot.goTo("home base")
         }
 
+        binding.ibNewArrivals.setOnClickListener {
+            robot.goTo("new arrivals")
+        }
+
 
     }
 }

@@ -36,12 +36,12 @@ class GridCFragment : Fragment(R.layout.fragment_grid_c),AdapterView.OnItemClick
     private fun setDataList(): ArrayList<GridItemC> {
         val arrayList: ArrayList<GridItemC> = ArrayList()
 
-        arrayList.add(GridItemC(R.string.c1, "C1"))
-        arrayList.add(GridItemC(R.string.c2, "C2"))
-        arrayList.add(GridItemC(R.string.c3, "C3"))
-        arrayList.add(GridItemC(R.string.c4, "C4"))
-        arrayList.add(GridItemC(R.string.c5, "C5"))
-        arrayList.add(GridItemC(R.string.c6, "C6"))
+        arrayList.add(GridItemC(R.string.c1, "c1"))
+        arrayList.add(GridItemC(R.string.c2, "c2"))
+        arrayList.add(GridItemC(R.string.c3, "c3"))
+        arrayList.add(GridItemC(R.string.c4, "c4"))
+        arrayList.add(GridItemC(R.string.c5, "c5"))
+        arrayList.add(GridItemC(R.string.c6, "c6"))
 
         return arrayList
 

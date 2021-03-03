@@ -2,27 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/coral"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvHomely"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/qanelas_semibold"
-        android:text="@string/homely"
-        android:textColor="@color/white"
-        android:textSize="100sp" />
-
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="320dp"
+        android:layout_below="@id/ivHomely"
         android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
 
         <Button
             android:id="@+id/btnHtc"
@@ -30,6 +25,7 @@
             android:layout_height="300dp"
             android:background="@drawable/button_menu"
             android:fontFamily="@font/qanelas_extrabold"
+            android:foreground="@drawable/button_bg_clear"
             android:lines="3"
             android:text="@string/htc"
             android:textSize="30sp" />
@@ -39,9 +35,9 @@
             android:layout_width="220dp"
             android:layout_height="300dp"
             android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
             android:background="@drawable/button_menu"
             android:fontFamily="@font/qanelas_extrabold"
+            android:foreground="@drawable/button_bg_clear"
             android:lines="3"
             android:text="@string/htb"
             android:textSize="30sp" />
@@ -56,7 +52,16 @@
             android:text="@string/htn"
             android:textSize="30sp" />
 
-
+        <Button
+            android:id="@+id/btnFaq"
+            android:layout_width="220dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="80dp"
+            android:background="@drawable/button_menu"
+            android:fontFamily="@font/qanelas_extrabold"
+            android:text="@string/faq"
+            android:textSize="30sp" />
     </LinearLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -79,12 +84,15 @@
                 android:id="@+id/llHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/nav_outline"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_home"
                     app:tint="@color/dblue" />
 
@@ -92,76 +100,135 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/qanelas_semibold"
                     android:gravity="center_vertical"
                     android:text="@string/home"
                     android:textColor="@color/dblue"
-                    android:textSize="50sp" />
+                    android:textSize="40sp" />
             </LinearLayout>
 
             <Space
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/llZone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/nav_outline"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_map"
                     app:tint="@color/dblue" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/qanelas_semibold"
                     android:gravity="center_vertical"
                     android:text="@string/viewselect"
                     android:textColor="@color/dblue"
-                    android:textSize="50sp" />
+                    android:textSize="40sp" />
             </LinearLayout>
 
             <Space
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:id="@+id/llWifi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/nav_outline"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_wifi"
                     app:tint="@color/dblue" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/qanelas_semibold"
                     android:gravity="center_vertical"
                     android:text="@string/wifi"
                     android:textColor="@color/dblue"
-                    android:textSize="50sp" />
+                    android:textSize="40sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+
+    <LinearLayout
+        android:id="@+id/llMenuBar"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_above="@id/btmNavLayout"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/homely_logo"
+            android:tooltipText="@string/steptooltip" />
+
+        <Button
+            android:id="@+id/htcBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:padding="20dp"
+            android:text="@string/htc"
+            android:textSize="25sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/htbBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:padding="20dp"
+            android:text="@string/htb"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivHomely"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/llMenuBar"
+        android:scaleType="fitCenter"
+        android:src="@drawable/homely_logo" />
+
     <FrameLayout
         android:id="@+id/mainFrome"
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_above="@id/btmNavLayout"/>
-
+        android:layout_above="@id/btmNavLayout"
+        android:layout_toEndOf="@id/llMenuBar" />
 
 </RelativeLayout>

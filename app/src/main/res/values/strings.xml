@@ -4,6 +4,7 @@
     <string name="zoneview">Zone View</string>
     <string name="home">Home</string>
     <string name="homely">Homely</string>
+    <string name="navhomely">Homely Zone Navigation</string>
     <string name="wifi">Connect to Free Wifi</string>
     <string name="tvwifi">Scan QR code to connect to our Wifi</string>
 
@@ -57,7 +58,7 @@
     <string name="c4">C4</string>
     <string name="c5">C5</string>
     <string name="c6">C6</string>
-    
+
     //Zone D
     <string name="d1">d1</string>
     <string name="d2">d2</string>
@@ -65,7 +66,8 @@
     <string name="d4">d4</string>
     <string name="d5">d5</string>
     <string name="d6">d6</string>
-    
+    <string name="d7">d7</string>
+
     //Zone E
     <string name="e1">e1</string>
     <string name="e2">e2</string>
@@ -73,7 +75,12 @@
     <string name="e4">e4</string>
     <string name="e5">e5</string>
     <string name="e6">e6</string>
-    
+    <string name="e7">e7</string>
+    <string name="e8">e8</string>
+    <string name="e9">e9</string>
+    <string name="e10">e10</string>
+    <string name="e11">e11</string>
+
     //Zone F
     <string name="f1">f1</string>
     <string name="f2">f2</string>
@@ -110,5 +117,20 @@
         <item>Zone C</item>
         <item>Zone D</item>
     </string-array>
+
+    <string name="faq">Faq</string>
+    <string name="htcdetail">How to check product details</string>
+    <string name="htbdetail">How to make a purchase</string>
+    <string name="options">Options</string>
+    <string name="menu">Menu</string>
+
+    <string name="open">Open</string>
+    <string name="closeb">Close</string>
+
+    <string name="howto">How to</string>
+
+    <string name="steptooltip">*Press the Step buttons to navigate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

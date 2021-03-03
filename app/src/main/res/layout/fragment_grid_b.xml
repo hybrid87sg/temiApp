@@ -11,11 +11,11 @@
         android:id="@+id/gvZoneB"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="5"
+        android:numColumns="4"
         android:verticalSpacing="50dp"
         android:columnWidth="130dp"
         android:gravity="center"
         android:stretchMode="spacingWidthUniform"
-        android:padding="30dp"/>
+        android:padding="20dp"/>
 
 </FrameLayout>

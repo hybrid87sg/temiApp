@@ -4,106 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     android:background="@color/coral"
     tools:context=".fragments.HtbFragment">
 
     <ImageView
-        android:id="@+id/ivHtb"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_above="@id/btmNavBar"
-        android:scaleType="fitCenter"
-        android:src="@drawable/temiux_htp1"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btmNavBar"
-        android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/ivHtb"
+        android:scaleType="fitXY"
+        android:scaleX="1.2"
+        android:scaleY="1.1"
+        android:layout_below="@id/tvHtp"
         android:layout_alignParentBottom="true"
-        android:background="@color/coral"
-        android:fitsSystemWindows="true"
-        android:visibility="gone"
-        app:elevation="1dp"
-        app:itemHorizontalTranslationEnabled="true"
-        app:itemIconSize="25dp"
-        app:itemIconTint="@color/dblue"
-        app:itemRippleColor="@color/white"
-        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.MidFont"
-        app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.MidFont"
-        app:itemTextColor="@color/dblue"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/btm_nav_menu" />
+        android:src="@drawable/temiux_htp1"/>
 
     <TextView
         android:id="@+id/tvHtp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/step1"
-        android:textSize="80sp"
+        android:text="@string/htbdetail"
+        android:textSize="60sp"
         android:fontFamily="@font/qanelas_semibold"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         />
 
-    <FrameLayout
-        android:layout_centerInParent="true"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="@string/steptooltip"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center|end"/>
 
-        <RelativeLayout
-            android:id="@+id/control2"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/stepBarHtb"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvHtp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingHorizontal="30dp">
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:id="@+id/stepBarHtb1"
+            android:text="@string/step1"
+            android:textSize="30sp"/>
 
-            <ImageButton
-                android:id="@+id/nextTwo"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:background="@color/clear"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_next"
-                android:tint="@color/white" />
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
 
-            <ImageButton
-                android:id="@+id/backTwo"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:background="@color/clear"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_back"
-                android:tint="@color/white" />
-        </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stepBarHtb2"
+            android:text="@string/step2"
+            android:textSize="30sp"/>
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stepBarHtb3"
+            android:text="@string/step3"
+            android:textSize="30sp"/>
+    </LinearLayout>
 
 
-
-        <ImageButton
-            android:id="@+id/backOne"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="start|center_vertical"
-            android:background="@color/clear"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_back"
-            android:visibility="gone"
-            android:tint="@color/white" />
-
-        <ImageButton
-            android:id="@+id/nextOne"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="end|center_vertical"
-            android:background="@color/clear"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_next"
-            android:tint="@color/white" />
-    </FrameLayout>
 
 
 </RelativeLayout>

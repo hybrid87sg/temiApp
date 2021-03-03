@@ -3,9 +3,12 @@ package com.hybrid.temiui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMapBinding
 import com.hybrid.temiui.fragments.*
+import com.robotemi.sdk.Robot
 
 
 class MapActivity : AppCompatActivity(R.layout.activity_map) {
@@ -19,16 +22,17 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
 
         supportActionBar?.hide()
 
+
+        val view = View.inflate(this,R.layout.fragment_custom_dialog,null)
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+
         val intent = Intent(this, MainActivity::class.java)
 
-        val dialog = CustomDialogFragment()
-
-        val fragmentBrands = BrandsFragment()
-        val fragmentUtils = UtilsFragment()
-
         val fragmentZone = ZoneFragment()
+        val fragmentZone2 = Zone2Fragment()
         val fragmentMap = MapFragment()
-        setCurrentFragment(fragmentZone)
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flZone, fragmentMap)
@@ -39,15 +43,15 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
                 startActivity(intent)
             }
             binding.llZone.setOnClickListener {
-                setCurrentFragment(fragmentZone)
+                setCurrentFragment(fragmentZone2)
             }
             binding.llMap.setOnClickListener {
                 setCurrentFragment(fragmentMap)
             }
             binding.llWifi.setOnClickListener {
-                dialog.show(supportFragmentManager, "Wifi")
+                dialog.show()
+                dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
             }
-
 
         }
     }
