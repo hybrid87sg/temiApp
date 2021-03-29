@@ -5,8 +5,9 @@
     <string name="home">Home</string>
     <string name="homely">Homely</string>
     <string name="navhomely">Homely Zone Navigation</string>
-    <string name="wifi">Connect to Free Wifi</string>
+    <string name="wifi">Our Wifi Password</string>
     <string name="tvwifi">Scan QR code to connect to our Wifi</string>
+    <string name="tvsubhead">Select a zone below.</string>
 
     <string name="next">Next Step</string>
     <string name="back">Previous Step</string>
@@ -14,12 +15,24 @@
     <string name="htb">How to purchase</string>
     <string name="htn">How to navigate</string>
 
-    <string name="pause">Pause Movement</string>
+    <string name="pause">Pause navigation</string>
+    <string name="pausenav">Navigation paused</string>
     <string name="change">Change Direction</string>
+    <string name="follow">User Follow Mode</string>
 
     <string name="maptitle">Select a button below to navigate Homely</string>
 
     //Zones - All
+    <string name="zone">Zone</string>
+    <string name="zA">A</string>
+    <string name="zB">B</string>
+    <string name="zC">C</string>
+    <string name="zD">D</string>
+    <string name="zE">E</string>
+    <string name="zF">F</string>
+    <string name="zG">G</string>
+    <string name="zoneRug">Rugs</string>
+
     <string name="zoneA">Zone A</string>
     <string name="zoneB">Zone B</string>
     <string name="zoneC">Zone C</string>
@@ -27,7 +40,8 @@
     <string name="zoneE">Zone E</string>
     <string name="zoneF">Zone F</string>
     <string name="zoneG">Zone G</string>
-    <string name="zoneRug">Rugs</string>
+
+    <string name="nil"> </string>
 
     //Zone A
     <string name="a1">A1</string>
@@ -111,14 +125,8 @@
 
     <string name="popular">Popular locations</string>
 
-    <string-array name="Zoning">
-        <item>Zone A</item>
-        <item>Zone B</item>
-        <item>Zone C</item>
-        <item>Zone D</item>
-    </string-array>
 
-    <string name="faq">Faq</string>
+    <string name="faq">FAQs</string>
     <string name="htcdetail">How to check product details</string>
     <string name="htbdetail">How to make a purchase</string>
     <string name="options">Options</string>

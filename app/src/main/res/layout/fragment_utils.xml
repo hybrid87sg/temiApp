@@ -8,9 +8,9 @@
         android:id="@+id/gridUtils"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="130dp"
+        android:columnWidth="160dp"
         android:gravity="center"
-        android:numColumns="4"
+        android:numColumns="2"
         android:padding="20dp"
         android:stretchMode="spacingWidthUniform"
         android:verticalSpacing="50dp" />

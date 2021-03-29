@@ -28,41 +28,51 @@ class Zone2Fragment : Fragment(R.layout.fragment_zone2) {
         val gridBrands = BrandsFragment()
         val gridUtils = UtilsFragment()
 
+
         binding.btn2ZoneA.setOnClickListener {
             setCurrentFragment(gridA)
-            binding.zoneTitle.text = getText(R.string.zoneA)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zA)
         }
         binding.btn2ZoneB.setOnClickListener {
             setCurrentFragment(gridB)
-            binding.zoneTitle.text = getText(R.string.zoneB)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zB)
         }
         binding.btn2ZoneC.setOnClickListener {
             setCurrentFragment(gridC)
-            binding.zoneTitle.text = getText(R.string.zoneC)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zC)
         }
         binding.btn2ZoneD.setOnClickListener {
             setCurrentFragment(gridD)
-            binding.zoneTitle.text = getText(R.string.zoneD)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zD)
         }
         binding.btn2ZoneE.setOnClickListener {
             setCurrentFragment(gridE)
-            binding.zoneTitle.text = getText(R.string.zoneE)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zE)
         }
         binding.btn2ZoneF.setOnClickListener {
             setCurrentFragment(gridF)
-            binding.zoneTitle.text = getText(R.string.zoneF)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zF)
         }
         binding.btn2ZoneG.setOnClickListener {
             setCurrentFragment(gridG)
-            binding.zoneTitle.text = getText(R.string.zoneG)
+            binding.zoneTitle.text = getText(R.string.zone)
+            binding.tvSubhead.text = getText(R.string.zG)
         }
         binding.btn2ZoneBrands.setOnClickListener {
             setCurrentFragment(gridBrands)
             binding.zoneTitle.text = getText(R.string.brands)
+            binding.tvSubhead.text = getText(R.string.nil)
         }
         binding.btn2ZoneUtils.setOnClickListener {
             setCurrentFragment(gridUtils)
             binding.zoneTitle.text = getText(R.string.utils)
+            binding.tvSubhead.text = getText(R.string.nil)
         }
 
 

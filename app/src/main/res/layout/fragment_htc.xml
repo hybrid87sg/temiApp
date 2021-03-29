@@ -12,10 +12,8 @@
         android:id="@+id/ivHtc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:scaleX="1.2"
-        android:scaleY=".95"
-        android:paddingTop="20dp"
+        android:scaleType="fitCenter"
+        android:paddingTop="70dp"
         android:layout_alignParentBottom="true"
         android:src="@drawable/temiux_htc1" />
 

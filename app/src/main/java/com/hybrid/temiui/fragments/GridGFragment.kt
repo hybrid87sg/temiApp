@@ -1,5 +1,6 @@
 package com.hybrid.temiui.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -10,6 +11,7 @@ import com.hybrid.temiui.databinding.FragmentGridGBinding
 import com.hybrid.temiui.fragments.adapter.GridGAdapter
 import com.hybrid.temiui.fragments.model.GridItemG
 import com.robotemi.sdk.Robot
+import com.robotemi.sdk.TtsRequest
 
 
 class GridGFragment : Fragment(R.layout.fragment_grid_g),AdapterView.OnItemClickListener {
@@ -45,7 +47,10 @@ class GridGFragment : Fragment(R.layout.fragment_grid_g),AdapterView.OnItemClick
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val booth:GridItemG = arrayList!![position]
         robot.goTo(booth.name.toString())
-        Toast.makeText(context,"Going to "+ booth.name,Toast.LENGTH_LONG).show()
+        robot.speak(TtsRequest.create("Follow me to "+booth.name,false))
+        val dialog = TemiNavFragment()
+        dialog.isCancelable = false
+        dialog.show(childFragmentManager,"Temi Nav")
     }
 
 

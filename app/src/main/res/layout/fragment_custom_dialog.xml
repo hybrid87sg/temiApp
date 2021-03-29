@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:background="@drawable/qr_bg"
-        android:padding="50dp">
+        android:background="@color/coral"
+        android:padding="30dp">
 
         <TextView
             android:id="@+id/tvWifi"
@@ -37,6 +37,19 @@
             android:layout_gravity="center_horizontal"
             android:tintMode="add"
             app:tint="@color/dblue" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_zone"
+            android:text="@string/closeb"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:id="@+id/btnClose"
+            android:clickable="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/qanelas_semibold"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </RelativeLayout>

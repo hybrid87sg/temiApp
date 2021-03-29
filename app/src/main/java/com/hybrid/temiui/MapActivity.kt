@@ -23,11 +23,6 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         supportActionBar?.hide()
 
 
-        val view = View.inflate(this,R.layout.fragment_custom_dialog,null)
-        val builder = AlertDialog.Builder(this)
-        builder.setView(view)
-        val dialog = builder.create()
-
         val intent = Intent(this, MainActivity::class.java)
 
         val fragmentZone = ZoneFragment()
@@ -35,7 +30,7 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
         val fragmentMap = MapFragment()
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flZone, fragmentMap)
+            replace(R.id.flZone, fragmentZone2)
             commit()
 
             //btmNavBarLayout
@@ -49,8 +44,9 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
                 setCurrentFragment(fragmentMap)
             }
             binding.llWifi.setOnClickListener {
-                dialog.show()
-                dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+                val dialog = CustomDialogFragment()
+                dialog.show(supportFragmentManager,"customdialog")
+                dialog.isCancelable = false
             }
 
         }

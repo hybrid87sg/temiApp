@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/icons"
         android:layout_width="wrap_content"
-        android:layout_height="170dp"
+        android:layout_height="150dp"
         android:src="@drawable/showmewhere_brands_haylee"/>
 
 
