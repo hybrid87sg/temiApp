@@ -36,15 +36,15 @@ class BrandsFragment : Fragment(R.layout.fragment_brands) , AdapterView.OnItemCl
     private fun setDataList():ArrayList<GridItemBrands>{
         val arrayList:ArrayList<GridItemBrands> = ArrayList()
 
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_haylee,"haylee"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_kanex,"kanex"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_newarrivals,"newarrivals"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_fynelinen,"fynelinen"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_beddingday,"beddingday"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_outdoor,"outdoor"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_softfurnishing,"softfurnishing"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_mattresszone,"mattresszone"))
-        arrayList.add(GridItemBrands(R.drawable.showmewhere_brands_rugsncarpets,"rugs and carpets"))
+        arrayList.add(GridItemBrands(R.drawable.brands_haylee,"haylee"))
+        arrayList.add(GridItemBrands(R.drawable.brands_kanex,"kanex"))
+        arrayList.add(GridItemBrands(R.drawable.brands_newarrivals,"newarrivals"))
+        arrayList.add(GridItemBrands(R.drawable.brands_fynelinen,"fynelinen"))
+        arrayList.add(GridItemBrands(R.drawable.brands_beddingday,"beddingday"))
+        arrayList.add(GridItemBrands(R.drawable.brands_outdoor,"outdoor"))
+        arrayList.add(GridItemBrands(R.drawable.brands_softfurishing,"softfurnishing"))
+        arrayList.add(GridItemBrands(R.drawable.brands_mattressexp,"mattresszone"))
+        arrayList.add(GridItemBrands(R.drawable.brands_menu_rugscarpet,"rugs and carpets"))
 
         return arrayList
     }

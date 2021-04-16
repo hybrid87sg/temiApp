@@ -39,61 +39,6 @@
             android:textSize="30sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="320dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-
-        <Button
-            android:id="@+id/btnHtc"
-            android:layout_width="220dp"
-            android:layout_height="300dp"
-            android:background="@drawable/button_menu"
-            android:fontFamily="@font/qanelas_extrabold"
-            android:foreground="@drawable/button_bg_clear"
-            android:lines="3"
-            android:text="@string/htc"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/btnHtb"
-            android:layout_width="220dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="80dp"
-            android:background="@drawable/button_menu"
-            android:fontFamily="@font/qanelas_extrabold"
-            android:foreground="@drawable/button_bg_clear"
-            android:lines="3"
-            android:text="@string/htb"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/btnHtn"
-            android:layout_width="220dp"
-            android:layout_height="300dp"
-            android:background="@drawable/button_menu"
-            android:fontFamily="@font/qanelas_extrabold"
-            android:lines="3"
-            android:text="@string/htn"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/btnFaq"
-            android:layout_width="220dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="80dp"
-            android:background="@drawable/button_menu"
-            android:fontFamily="@font/qanelas_extrabold"
-            android:text="@string/faq"
-            android:textSize="30sp" />
-    </LinearLayout>
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/btmNavLayout"
         android:layout_width="match_parent"
@@ -121,9 +66,9 @@
 
                 <ImageView
                     android:id="@+id/ivIcon"
-                    android:layout_width="60dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/ic_home"
+                    android:src="@drawable/bottom_menu_home"
                     app:tint="@color/dblue" />
 
                 <TextView
@@ -134,6 +79,7 @@
                     android:fontFamily="@font/qanelas_semibold"
                     android:gravity="center_vertical"
                     android:text="@string/home"
+                    android:visibility="gone"
                     android:textColor="@color/dblue"
                     android:textSize="40sp" />
 
@@ -153,10 +99,10 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="60dp"
+                    android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/ic_map"
+                    android:src="@drawable/bottom_menu_location"
                     app:tint="@color/dblue" />
 
                 <TextView
@@ -167,7 +113,8 @@
                     android:gravity="center_vertical"
                     android:text="@string/viewselect"
                     android:textColor="@color/dblue"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <Space
@@ -184,10 +131,10 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="60dp"
+                    android:layout_width="400dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/ic_wifi"
+                    android:src="@drawable/bottom_menu_wifi"
                     app:tint="@color/dblue" />
 
                 <TextView
@@ -198,6 +145,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/wifi"
                     android:textColor="@color/dblue"
+                    android:visibility="gone"
                     android:textSize="40sp" />
             </LinearLayout>
 
@@ -212,7 +160,8 @@
                 android:background="@drawable/nav_outline"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:visibility="gone">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -241,13 +190,15 @@
 
     <ImageView
         android:id="@+id/ivHomely"
-        android:layout_width="wrap_content"
+        android:layout_width="700dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/homely_logo" />
+        android:layout_marginBottom="30dp"
+        android:layout_above="@id/llSteps"
+        android:src="@drawable/homepage_homelylogo_09" />
 
     <FrameLayout
         android:id="@+id/mainFrome"

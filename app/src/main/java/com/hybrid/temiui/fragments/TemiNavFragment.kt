@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -32,8 +33,14 @@ class TemiNavFragment : DialogFragment() {
         val btnPause = rootview.findViewById<Button>(R.id.btnPause)
         val btnChange = rootview.findViewById<Button>(R.id.btnChange)
         val btnFollow = rootview.findViewById<Button>(R.id.btnFollow)
+        val tvClose = rootview.findViewById<TextView>(R.id.tvClose)
+
 
         tvSubText.text = getText(R.string.nil)
+
+        tvClose.setOnClickListener {
+            dismiss()
+        }
 
         btnFollow.setOnClickListener {
             robot.beWithMe()

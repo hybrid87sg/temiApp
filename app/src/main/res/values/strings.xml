@@ -140,5 +140,23 @@
     <string name="steptooltip">*Press the Step buttons to navigate</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="admin">Admin Login</string>
+    <string name="settings_page">Settings page</string>
+    <string name="battery">Battery</string>
+    <string name="robot_speed">Robot Speed</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="slow">Slow</string>
+    <string name="apply_settings">Apply settings</string>
 
 </resources>

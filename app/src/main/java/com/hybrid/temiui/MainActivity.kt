@@ -1,17 +1,10 @@
 package com.hybrid.temiui
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.View
-import android.widget.PopupMenu
-import android.widget.TextView
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import coil.load
 import com.hybrid.temiui.databinding.ActivityMainBinding
 import com.hybrid.temiui.fragments.*
 import com.robotemi.sdk.Robot
@@ -19,7 +12,7 @@ import com.robotemi.sdk.Robot
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var binding : ActivityMainBinding
-
+    val robot = Robot.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,32 +20,37 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+        robot.hideTopBar()
+        robot.isReady
 
         val htcFragment = HtcFragment()
         val htbFragment = HtbFragment()
         val faqFragment = FaqFragment()
 
-        val robot = Robot.getInstance()
+
+        binding.ivHomely.setOnClickListener {
+            val dialog = LoginFragment()
+            dialog.show(supportFragmentManager,"login")
+        }
 
         binding.barHtc.setOnClickListener {
             setCurrentFragment(htcFragment)
             binding.mainFrome.visibility = View.VISIBLE
-            binding.tvHome.text = getString(R.string.closeb)
-            binding.ivIcon.setImageResource(R.drawable.ic_close)
+            binding.tvHome.text = getString(R.string.home)
+            binding.llHome.visibility = View.VISIBLE
         }
 
         binding.barHtb.setOnClickListener {
             setCurrentFragment(htbFragment)
             binding.mainFrome.visibility = View.VISIBLE
-            binding.tvHome.text =  getString(R.string.closeb)
-            binding.ivIcon.setImageResource(R.drawable.ic_close)
+            binding.tvHome.text =  getString(R.string.home)
+            binding.llHome.visibility = View.VISIBLE
         }
 
         //btmNavBarLayout
         binding.llHome.setOnClickListener {
             binding.mainFrome.visibility = View.GONE
             binding.tvHome.text =  getString(R.string.home)
-            binding.ivIcon.setImageResource(R.drawable.ic_home)
         }
         binding.llZone.setOnClickListener {
             val intent= Intent(this,MapActivity::class.java)
@@ -66,6 +64,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         binding.llFaq.setOnClickListener {
             setCurrentFragment(faqFragment)
+            binding.tvHome.text =  getString(R.string.home)
+            binding.llHome.visibility = View.VISIBLE
         }
 
     }

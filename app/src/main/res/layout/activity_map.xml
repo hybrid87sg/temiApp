@@ -12,8 +12,86 @@
         android:id="@+id/flZone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/btmNavLayout"
+        android:layout_above="@id/btmBar"
+        android:layout_marginBottom="10dp"
         android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/btmBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/homeBtnBar"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:src="@drawable/bottom_menu_home"
+            app:tint="@color/dblue" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/mapBtnBar"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            app:tint="@color/dblue"
+            android:src="@drawable/bottom_menu_location" />
+
+        <Space
+            android:layout_width="50dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/llMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_outline"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_map"
+                app:tint="@color/dblue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/qanelas_semibold"
+                android:gravity="center_vertical"
+                android:text="@string/mapview"
+                android:textColor="@color/dblue"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/zoneBtnBar"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            app:tint="@color/dblue"
+            android:visibility="gone"
+            android:src="@drawable/bottom_menu_home" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/wifiBtnBar"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            app:tint="@color/dblue"
+            android:src="@drawable/bottom_menu_wifi" />
+    </LinearLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/btmNavLayout"
@@ -21,7 +99,8 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
 
 
         <LinearLayout
@@ -61,32 +140,6 @@
             <Space
                 android:layout_width="50dp"
                 android:layout_height="wrap_content" />
-
-            <LinearLayout
-                android:id="@+id/llMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/nav_outline"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_map"
-                    app:tint="@color/dblue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:fontFamily="@font/qanelas_semibold"
-                    android:gravity="center_vertical"
-                    android:text="@string/mapview"
-                    android:textColor="@color/dblue"
-                    android:textSize="35sp" />
-            </LinearLayout>
 
             <Space
                 android:layout_width="50dp"

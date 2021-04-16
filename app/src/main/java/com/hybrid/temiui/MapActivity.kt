@@ -34,16 +34,16 @@ class MapActivity : AppCompatActivity(R.layout.activity_map) {
             commit()
 
             //btmNavBarLayout
-            binding.llHome.setOnClickListener {
+            binding.homeBtnBar.setOnClickListener {
                 startActivity(intent)
             }
-            binding.llZone.setOnClickListener {
+            binding.mapBtnBar.setOnClickListener {
                 setCurrentFragment(fragmentZone2)
             }
             binding.llMap.setOnClickListener {
                 setCurrentFragment(fragmentMap)
             }
-            binding.llWifi.setOnClickListener {
+            binding.wifiBtnBar.setOnClickListener {
                 val dialog = CustomDialogFragment()
                 dialog.show(supportFragmentManager,"customdialog")
                 dialog.isCancelable = false

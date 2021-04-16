@@ -12,9 +12,12 @@
         android:layout_height="match_parent"
         android:columnWidth="180dp"
         android:gravity="center"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
         android:numColumns="3"
         android:stretchMode="spacingWidthUniform"
-        android:verticalSpacing="5dp"/>
+        android:verticalSpacing="20dp"
+        android:horizontalSpacing="20dp"/>
 
 
 </RelativeLayout>

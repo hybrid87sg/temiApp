@@ -39,10 +39,10 @@ class UtilsFragment : Fragment(R.layout.fragment_utils), AdapterView.OnItemClick
     private fun setDataList(): ArrayList<GridItemUtils> {
         val arrayList: ArrayList<GridItemUtils> = ArrayList()
 
-        arrayList.add(GridItemUtils(R.drawable.showmewhere_utilities_coffeebar, "coffee bar"))
-        arrayList.add(GridItemUtils(R.drawable.showmewhere_utilities_toilet, "toilet"))
-        arrayList.add(GridItemUtils(R.drawable.showmewhere_utilities_infocounter, "home base"))
-        arrayList.add(GridItemUtils(R.drawable.showmewhere_utilities_decornmore, "decornmore"))
+        arrayList.add(GridItemUtils(R.drawable.utilities_menu_coffeebar, "coffee bar"))
+        arrayList.add(GridItemUtils(R.drawable.utilities_menu_toilet, "toilet"))
+        arrayList.add(GridItemUtils(R.drawable.utilities_menu_info, "home base"))
+        arrayList.add(GridItemUtils(R.drawable.utilities_menu_decornmore, "decornmore"))
 
         return arrayList
     }
