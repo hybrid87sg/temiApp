@@ -1,14 +1,10 @@
 package com.hybrid.temiui.fragments
 
-import android.app.AlertDialog
-import android.app.SharedElementCallback
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.AdapterView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import com.hybrid.temiui.R
@@ -17,9 +13,11 @@ import com.hybrid.temiui.fragments.adapter.GridAdapter
 import com.hybrid.temiui.fragments.model.GridItemA
 import com.robotemi.sdk.Robot
 import com.robotemi.sdk.TtsRequest
+import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener
 
 
-class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClickListener {
+
+class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClickListener,OnGoToLocationStatusChangedListener {
 
     private lateinit var binding: FragmentGridABinding
 
@@ -61,10 +59,29 @@ class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClic
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val booth: GridItemA = arrayList!![position]
         robot.goTo(booth.name.toString())
-        robot.speak(TtsRequest.create("Follow me to "+booth.name,false))
+        robot.speak(TtsRequest.create("Follow me to " + booth.name, false))
         val dialog = TemiNavFragment()
         dialog.isCancelable = false
-        dialog.show(childFragmentManager,"Temi Nav")
+        dialog.show(childFragmentManager, "Temi Nav")
 
+        onGoToLocationStatusChanged(
+            booth.toString(),
+            status = "complete",
+            description = booth.toString()
+        )
+
+    }
+
+    fun onGoToLocationStatusChanged(
+        location: String,
+        status: String,
+        description: String
+    ) {
+        print("GoToStatusChanged: location=$location, status=$status, description=$description")
+        robot.speak(TtsRequest.create(status, false))
+        Toast.makeText(context, status, Toast.LENGTH_LONG).show()
+        if (description.isNotBlank()) {
+            robot.speak(TtsRequest.create(description, false))
+        }
     }
 }

@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMainBinding
 import com.hybrid.temiui.fragments.*
 import com.robotemi.sdk.Robot
+import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class MainActivity : AppCompatActivity(R.layout.activity_main) ,
+    OnGoToLocationStatusChangedListener {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     val robot = Robot.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         robot.hideTopBar()
         robot.isReady
 
+
         val htcFragment = HtcFragment()
         val htbFragment = HtbFragment()
         val faqFragment = FaqFragment()
@@ -30,7 +33,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         binding.ivHomely.setOnClickListener {
             val dialog = LoginFragment()
-            dialog.show(supportFragmentManager,"login")
+            dialog.show(supportFragmentManager, "login")
         }
 
         binding.barHtc.setOnClickListener {
@@ -43,37 +46,39 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         binding.barHtb.setOnClickListener {
             setCurrentFragment(htbFragment)
             binding.mainFrome.visibility = View.VISIBLE
-            binding.tvHome.text =  getString(R.string.home)
+            binding.tvHome.text = getString(R.string.home)
             binding.llHome.visibility = View.VISIBLE
         }
 
         //btmNavBarLayout
         binding.llHome.setOnClickListener {
             binding.mainFrome.visibility = View.GONE
-            binding.tvHome.text =  getString(R.string.home)
+            binding.tvHome.text = getString(R.string.home)
         }
         binding.llZone.setOnClickListener {
-            val intent= Intent(this,MapActivity::class.java)
+            val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
         binding.llWifi.setOnClickListener {
             val dialog = CustomDialogFragment()
-            dialog.show(supportFragmentManager,"customdialog")
+            dialog.show(supportFragmentManager, "customdialog")
             dialog.isCancelable = false
         }
 
         binding.llFaq.setOnClickListener {
             setCurrentFragment(faqFragment)
-            binding.tvHome.text =  getString(R.string.home)
+            binding.tvHome.text = getString(R.string.home)
             binding.llHome.visibility = View.VISIBLE
         }
 
     }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.mainFrome,fragment)
-                commit()
-            }
+    fun setCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.mainFrome, fragment)
+            commit()
+        }
     }
+
+
 }
