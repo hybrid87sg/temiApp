@@ -138,7 +138,6 @@
     <string name="howto">How to</string>
 
     <string name="steptooltip">*Press the Step buttons to navigate</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -157,6 +156,6 @@
     <string name="high">High</string>
     <string name="medium">Medium</string>
     <string name="slow">Slow</string>
-    <string name="apply_settings">Apply settings</string>
+    <string name="apply_settings">Get locations</string>
 
 </resources>

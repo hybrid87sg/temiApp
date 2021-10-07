@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) ,
     OnGoToLocationStatusChangedListener {
 
     private lateinit var binding: ActivityMainBinding
+
     val robot = Robot.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) ,
         supportActionBar?.hide()
         robot.hideTopBar()
         robot.isReady
+
 
 
         val htcFragment = HtcFragment()
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) ,
             binding.mainFrome.visibility = View.VISIBLE
             binding.tvHome.text = getString(R.string.home)
             binding.llHome.visibility = View.VISIBLE
+            binding.ivHomely.visibility = View.GONE
         }
 
         binding.barHtb.setOnClickListener {
@@ -48,12 +52,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) ,
             binding.mainFrome.visibility = View.VISIBLE
             binding.tvHome.text = getString(R.string.home)
             binding.llHome.visibility = View.VISIBLE
+            binding.ivHomely.visibility = View.GONE
         }
 
         //btmNavBarLayout
         binding.llHome.setOnClickListener {
             binding.mainFrome.visibility = View.GONE
             binding.tvHome.text = getString(R.string.home)
+            binding.ivHomely.visibility = View.VISIBLE
         }
         binding.llZone.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)

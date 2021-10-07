@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
+    android:background="@color/coral"
     tools:context=".fragments.LoginFragment">
 
     <LinearLayout
@@ -24,10 +25,16 @@
             android:id="@+id/login"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:allowUndo="false"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
             android:hint="@string/password"
+            android:inputType="numberPassword"
             android:lines="1"
             android:maxLines="1"
+            android:minHeight="48dp"
             android:nestedScrollingEnabled="false"
+            android:selectAllOnFocus="false"
             android:singleLine="true" />
 
         <Button
@@ -35,6 +42,7 @@
             android:layout_height="wrap_content"
             android:text="@string/login"
             android:id="@+id/btnLogin"
+            android:background="@color/dblue"
             android:layout_marginTop="20dp"/>
 
     </LinearLayout>
