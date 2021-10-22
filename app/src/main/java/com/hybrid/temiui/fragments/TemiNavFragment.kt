@@ -14,52 +14,43 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hybrid.temiui.R
+import com.hybrid.temiui.databinding.FragmentTemiNavBinding
 import com.robotemi.sdk.Robot
 import com.robotemi.sdk.TtsRequest
 
 
-class TemiNavFragment : DialogFragment() {
-
+class TemiNavFragment : DialogFragment(R.layout.fragment_temi_nav) {
+private lateinit var binding: FragmentTemiNavBinding
     val robot = Robot.getInstance()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val rootview: View = inflater.inflate(R.layout.fragment_temi_nav, container, false)
-
-        val tvSubText = rootview.findViewById<TextView>(R.id.tvSubText)
-        val btnPause = rootview.findViewById<Button>(R.id.btnPause)
-        val btnChange = rootview.findViewById<Button>(R.id.btnChange)
-        val btnFollow = rootview.findViewById<Button>(R.id.btnFollow)
-        val tvClose = rootview.findViewById<TextView>(R.id.tvClose)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentTemiNavBinding.bind(view)
 
 
-        tvSubText.text = getText(R.string.nil)
+        binding.tvSubText.text = getText(R.string.nil)
 
-        tvClose.setOnClickListener {
+        binding.tvClose.setOnClickListener {
             dismiss()
         }
 
-        btnFollow.setOnClickListener {
+        binding.btnFollow.setOnClickListener {
             robot.beWithMe()
             robot.speak(TtsRequest.create("Where do you want me to follow you to?",false))
-            tvSubText.text = getText(R.string.follow)
+            binding.tvSubText.text = getText(R.string.follow)
         }
 
-        btnChange.setOnClickListener {
+        binding.btnChange.setOnClickListener {
             robot.stopMovement()
             robot.speak(TtsRequest.create("Changing destination.",false))
             dismiss()
         }
 
-        btnPause.setOnClickListener {
+        binding.btnPause.setOnClickListener {
             robot.stopMovement()
             robot.speak(TtsRequest.create("Stopping movement!",false))
-            tvSubText.text = getText(R.string.pausenav)
+            binding.tvSubText.text = getText(R.string.pausenav)
         }
 
-        return rootview
     }
 }

@@ -4,14 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.hybrid.temiui.databinding.ActivityMainBinding
 import com.hybrid.temiui.fragments.*
 import com.robotemi.sdk.Robot
+import com.robotemi.sdk.TtsRequest
 import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) ,
-    OnGoToLocationStatusChangedListener {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -26,8 +27,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) ,
         supportActionBar?.hide()
         robot.hideTopBar()
         robot.isReady
-
-
 
         val htcFragment = HtcFragment()
         val htbFragment = HtbFragment()

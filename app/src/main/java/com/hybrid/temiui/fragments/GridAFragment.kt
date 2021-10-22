@@ -3,27 +3,21 @@ package com.hybrid.temiui.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
 import com.hybrid.temiui.R
 import com.hybrid.temiui.databinding.FragmentGridABinding
 import com.hybrid.temiui.fragments.adapter.GridAdapter
 import com.hybrid.temiui.fragments.model.GridItemA
 import com.robotemi.sdk.Robot
 import com.robotemi.sdk.TtsRequest
-import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener
 
 
 
-class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClickListener,OnGoToLocationStatusChangedListener {
+class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClickListener{
 
     private lateinit var binding: FragmentGridABinding
 
     private val robot = Robot.getInstance()
-
-    private val temiNavFragment:ViewModel by activityViewModels()
 
     private var arrayList: ArrayList<GridItemA>? = null
     private var gridAdapter: GridAdapter? = null
@@ -64,24 +58,7 @@ class GridAFragment : Fragment(R.layout.fragment_grid_a), AdapterView.OnItemClic
         dialog.isCancelable = false
         dialog.show(childFragmentManager, "Temi Nav")
 
-        onGoToLocationStatusChanged(
-            booth.toString(),
-            status = "complete",
-            description = booth.toString()
-        )
 
     }
 
-    fun onGoToLocationStatusChanged(
-        location: String,
-        status: String,
-        description: String
-    ) {
-        print("GoToStatusChanged: location=$location, status=$status, description=$description")
-        robot.speak(TtsRequest.create(status, false))
-        Toast.makeText(context, status, Toast.LENGTH_LONG).show()
-        if (description.isNotBlank()) {
-            robot.speak(TtsRequest.create(description, false))
-        }
-    }
 }
